@@ -1,5 +1,10 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/stevencarpenter/.oh-my-zsh
+# conditionalize on OSX or linux
+if [[ -d "/Users" ]]; then
+  export ZSH=/Users/stevencarpenter/.oh-my-zsh
+else
+  export ZSH=/home/scarpenter/.oh-my-zsh
+fi
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
