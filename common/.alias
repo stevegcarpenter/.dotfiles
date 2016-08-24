@@ -1,0 +1,22 @@
+# All relevant aliases for Linux
+
+## Use a long listing format ##
+alias ll='ls -la' 
+
+## Always display color 
+alias ls='ls --color'
+
+## Display directories
+alias ld='ls -d */'
+
+## Display hidden files
+alias lh='ls -a | grep "^\."'
+
+## Prefer no-window version
+alias emacs='emacs -nw'
+
+## Use VIM, not VI
+alias vi='vim'
+
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
