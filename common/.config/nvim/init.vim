@@ -26,7 +26,6 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 
 " Status bar mods
 Plugin 'bling/vim-airline'
-Plugin 'airblade/vim-gitgutter'
 
 " Python code checking plugin
 Plugin 'klen/python-mode'

@@ -14,15 +14,29 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
+
+" EasyMotion - Allows <leader><leader>(b|e) to jump to (b)eginning or (end)
+" of words.
+Plugin 'easymotion/vim-easymotion'
+" Ctrl-P - Fuzzy file search
+Plugin 'kien/ctrlp.vim'
 
 Plugin 'rking/ag.vim'      " ag search
 Plugin 'ervandew/supertab' " Tab completion
-Plugin 'tpope/vim-surround' " Punctuation help
 
-Plugin 'vim-ruby/vim-ruby' " Ruby support in VIM
+" Agrigate of python related plugins
 Plugin 'klen/python-mode' " Python code checking plugin
+
+" Edit multiple lines simultaneously
 Plugin 'terryma/vim-multiple-cursors' " Multiple cursors
+
+" Status bar mods
+Plugin 'bling/vim-airline'
+
+" Remove extraneous whitespace when edit mode is exited
+" Plugin 'thirtythreeforty/lessspace.vim'
+
 " Cleverly yank and paste splits
 Plugin 'wesQ3/vim-windowswap'
 
@@ -42,9 +56,20 @@ set backup
 set backupdir=~/.backup,.
 set noswapfile
 
+
+""""""" SuperTab configuration """""""
+"let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+function! Completefunc(findstart, base)
+    return "\<c-x>\<c-p>"
+endfunction
+
 "----------------------------------------------------------------------
 " Key Mappings
 "----------------------------------------------------------------------
+" Set the leader keys
+let mapleader="\ "
+let maplocalleader="\\"
+
 " Remap a key sequence in insert mode to kick me out to normal
 " mode. This makes it so this key sequence can never be typed
 " again in insert mode, so it has to be unique.
@@ -52,6 +77,10 @@ inoremap jj <esc>
 inoremap jJ <esc>
 inoremap Jj <esc>
 inoremap JJ <esc>
+inoremap kk <esc>
+inoremap kK <esc>
+inoremap Kk <esc>
+inoremap KK <esc>
 inoremap jk <esc>
 inoremap jK <esc>
 inoremap Jk <esc>
@@ -130,18 +159,15 @@ set noshowmode
 " More natural splits
 set splitright
 
-" VIM Lightline Status Line Configuration
-
-
 " Visual pattern search
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 
 function! s:VSetSearch()
-        let temp = @s
-        norm! gv"sy
-        let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
-        let @s = temp
+    let temp = @s
+    norm! gv"sy
+    let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+    let @s = temp
 endfunction
 
 function! s:DiffWithSaved()
@@ -159,4 +185,20 @@ nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
+" open files fast
+nnoremap <leader>o :CtrlP<CR>
 
+" split window fast
+nnoremap <leader>\| :vsplit<CR>
+nnoremap <leader>- :split<CR>
+nnoremap <leader>q :quit<CR>
+
+" open previous file
+nnoremap <leader>p :e#<CR>
+
+" open buffer list, allow selection
+nnoremap <leader>l :buffers<CR>:buffer<Space>
+nnoremap <leader>b :bprevious<CR>
+
+" save quick
+nnoremap <leader>w :w<CR>
