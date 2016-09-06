@@ -88,12 +88,17 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# export editor
+export EDITOR=vim
+export VISUAL=vim
+
 # This path only exists on OSX
 if [[ -d "/System" ]]; then
   export PATH=$PATH:/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/
 else
   PATH=/opt/xkl/env/1.2/bin:$PATH
   PATH=/opt/xkl/tools/bin:$PATH
+  PATH=/opt/xkl/tools:$PATH
 fi
 
 source ~/.alias
