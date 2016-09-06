@@ -93,6 +93,7 @@ if [[ -d "/System" ]]; then
   export PATH=$PATH:/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/
 else
   PATH=/opt/xkl/env/1.2/bin:$PATH
+  PATH=/opt/xkl/tools/bin:$PATH
 fi
 
 source ~/.alias
