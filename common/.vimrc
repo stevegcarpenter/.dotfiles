@@ -200,5 +200,8 @@ nnoremap <leader>p :e#<CR>
 nnoremap <leader>l :buffers<CR>:buffer<Space>
 nnoremap <leader>b :bprevious<CR>
 
+nnoremap <leader>p :set paste<CR>
+nnoremap <leader><leader>p :set nopaste<CR>
+
 " save quick
 nnoremap <leader>w :w<CR>
