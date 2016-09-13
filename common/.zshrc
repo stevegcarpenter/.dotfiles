@@ -88,6 +88,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# if a ranger config file exists, tell ranger to use that
+if [[ -f ~/.config/ranger/rc.conf ]]; then
+  export RANGER_LOAD_DEFAULT_RC=FALSE
+fi
+
 # This path only exists on OSX
 if [[ -d "/System" ]]; then
   export PATH=$PATH:/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/
