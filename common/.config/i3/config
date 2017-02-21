@@ -165,7 +165,7 @@ for_window [class="^.*"] border pixel 0
 gaps inner 20
 gaps outer 20
 # only enable gaps if > 1 container in workspace
-# smart_gaps on
+smart_gaps on
 
 set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
