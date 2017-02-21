@@ -2,7 +2,8 @@ set nocompatible              " be iMproved, required
 filetype plugin indent on     " required
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype c setlocal ts=4 sw=4 expandtab
-autocmd Filetype h setlocal ts=4 sw=4 expandtab
+autocmd Filetype cpp setlocal ts=4 sw=4 expandtab
+autocmd Filetype sdl setlocal ts=4 sw=4 expandtab
 
 scriptencoding utf-8
 set encoding=utf-8
@@ -19,8 +20,6 @@ Plugin 'VundleVim/Vundle.vim'
 " EasyMotion - Allows <leader><leader>(b|e) to jump to (b)eginning or (end)
 " of words.
 Plugin 'easymotion/vim-easymotion'
-" Ctrl-P - Fuzzy file search
-Plugin 'kien/ctrlp.vim'
 
 Plugin 'rking/ag.vim'      " ag search
 Plugin 'ervandew/supertab' " Tab completion
@@ -97,6 +96,10 @@ syntax on
 
 " turn off folding in python-mode
 let g:pymode_folding = 0
+" only allow auto-complete (default will enable docs preview also)¬
+" set completeopt=
+let g:pymode_rope=0
+
 "" allow switching to new buffer w/o saving changes
 set hidden
 
@@ -180,7 +183,7 @@ endfunction
 com! DiffSaved call s:DiffWithSaved()
 
 
-let g:windowswap_map_keys = 0 "prevent default bindings
+let g:windowswap_map_key = 0 "prevent default bindings
 nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
@@ -192,14 +195,23 @@ nnoremap <leader>o :CtrlP<CR>
 nnoremap <leader>\| :vsplit<CR>
 nnoremap <leader>- :split<CR>
 nnoremap <leader>q :quit<CR>
+nnoremap <leader>o :edit<Space>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
 " open previous file
 nnoremap <leader>p :e#<CR>
 
 " open buffer list, allow selection
-nnoremap <leader>l :buffers<CR>:buffer<Space>
-nnoremap <leader>b :bprevious<CR>
+nnoremap <leader><leader>l :buffers<CR>:buffer<Space>
+nnoremap <leader>b :e#<CR>
 
+" start ag search
+nnoremap <leader>/ :Ag<Space>
+
+" set/clear paste mode
 nnoremap <leader>p :set paste<CR>
 nnoremap <leader><leader>p :set nopaste<CR>
 
