@@ -1,22 +1,22 @@
 # All relevant aliases for Linux
 
-## Use a long listing format ##
-alias ll='ls -la' 
+# Default to Python 3
+# alias python="python3"
 
-## Always display color 
-# alias ls='ls --color'
+# Always display color
+alias ls="ls --color=auto"
 
-## Display directories
-alias ld='ls -d */'
+# Display directories
+alias ld="ls -d */"
 
-## Display hidden files
-alias lh='ls -a | grep "^\."'
+# Display hidden files
+alias lh="ls -a | grep '^\.'"
 
-## Prefer no-window version
-alias emacs='emacs -nw'
+# Display files with details
+alias ll="ls -lh"
 
-## Use VIM, not VI
-alias vi='vim'
+# Prefer no-window version
+alias emacs="emacs -nw"
 
-## Colorize the grep command output for ease of use (good for log files)##
-alias grep='grep --color=auto'
+# Use VIM, not VI
+alias vi="vim"
