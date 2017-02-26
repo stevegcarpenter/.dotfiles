@@ -214,3 +214,4 @@ exec google-chrome-stable
 exec compton -f
 exec_always xrdb ~/.Xresources &
 exec pulseaudio --start
+exec_always ~/.screenlayout/layout.sh
