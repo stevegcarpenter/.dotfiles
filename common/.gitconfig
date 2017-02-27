@@ -1,0 +1,7 @@
+[user]
+	name = Steven Carpenter
+	email = stevecarpenter@outlook.com
+[color]
+	ui = auto
+[credential]
+	helper = cache --timeout=3600

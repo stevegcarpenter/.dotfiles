@@ -1,0 +1,44 @@
+#include ".Xresources.d/.Xresources.colors"
+#include ".Xresources.d/.Xresources.rofi"
+
+! Disable bold font in URxvt / XTerm
+URxvt.font: xft:monospace:size=9
+URxvt.boldFont: false
+URxvt.boldItalicFont: false
+! reduce spacing between letters by 1 pixel
+URxvt.letterSpace: -1
+
+! Load perl scripts
+URxvt.perl-ext-common: resize-font
+
+! resize font script keys
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! Always login shell
+*loginShell: true
+
+! Always save at least 15000 lines
+*saveLines: 15000
+
+! Fix the Alt key URxvt / XTerm
+XTerm*metaSendsEscape: true
+URxvt*metaSendsEscape: true
+
+! Set as UTF8
+XTerm*locale: true
+URxvt*locale: true
+
+! Disable URxvt / XTerm scrollbar
+URxvt.scrollBar: false
+XTerm.scrollBar: false
+
