@@ -1,8 +1,5 @@
 # All relevant aliases for Linux
 
-# Default to Python 3
-# alias python="python3"
-
 # Always display color
 alias ls="ls --color=auto"
 
