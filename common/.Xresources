@@ -2,7 +2,7 @@
 #include ".Xresources.d/.Xresources.rofi"
 
 ! Disable bold font in URxvt / XTerm
-URxvt.font: xft:monospace:size=9
+URxvt.font: xft:monospace:size=8
 URxvt.boldFont: false
 URxvt.boldItalicFont: false
 ! reduce spacing between letters by 1 pixel
