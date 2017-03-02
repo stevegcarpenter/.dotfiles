@@ -6,7 +6,8 @@ if [[ $- != *i* ]]; then
 fi
 
 # Conditionally source some other files/symlinks
-declare -a bashfiles=(/etc/bashrc ~/.bashrc_custom ~/.alias)
+declare -a bashfiles
+bashfiles=(/etc/bashrc ~/.bashrc_custom ~/.alias)
 for f in ${bashfiles[@]}; do
   if [[ -f $f ]]; then
     # source it
