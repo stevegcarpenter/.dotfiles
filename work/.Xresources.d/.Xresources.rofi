@@ -1,18 +1,13 @@
-------------------------------------------------------------------------------
-! ROFI Color theme: Arc Dark
-! Copyright: 2017 leofa
 !
 ------------------------------------------------------------------------------
-! "Color scheme for normal row" Set from: File
-rofi.color-normal:                   argb:0383c4a, #c4cbd4, argb:96404552,
-#4084d6, #f9f9f9
-! "Color scheme for urgent row" Set from: File
-rofi.color-urgent:                   argb:02d303b, #cc6666, argb:e52d303b,
-#a54242, #f9f9f9
-! "Color scheme for active row" Set from: File
-rofi.color-active:                   argb:02d303b, #b5bd68, argb:e42d303b,
-#8c9440, #f9f9f9
-! "Color scheme window" Set from: File
-rofi.color-window:                   argb:f22d303b, #7c8389, #1d1f21
-! "Separator style (none, dash, solid)" Set from: XResources
-rofi.separator-style:                solid
+! ROFI Color theme
+! Based on Adapta-Nokto GTK theme
+(https://github.com/adapta-project/adapta-gtk-theme)  
+! Copyright: PyGeek03
+!
+------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #3a4c54, #2a373e, #c3c6c8
+rofi.color-normal: #455a64, #fafbfc, #455a64, #00bcd4, #fafbfc
+rofi.color-active: #455a64, #00bcd4, #455a64, #009688, #fdf6e3
+rofi.color-urgent: #455a64, #ff5252, #455a64, #ff5252, #fdf6e3
