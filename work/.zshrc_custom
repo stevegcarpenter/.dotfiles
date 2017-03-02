@@ -3,11 +3,11 @@
 # small hack to see if we are on a work pc or not
 if [[ -d /opt/xkl/env/1.2/bin ]]; then
   # User specific environment and startup programs
-  PATH=$PATH:$HOME/.scarpenter/bin
-  PATH=/opt/xkl/env/1.2/bin:$PATH
+  PATH=$PATH:/opt/xkl/env/1.2/bin
   # Support new build environment
   PATH=$PATH:/opt/xkl/tools
   PATH=$PATH:/opt/xkl/tools/bin
+  PATH=$PATH:$HOME/.scarpenter/bin
   LD_LIBRARY_PATH=$HOME/.scarpenter/lib
   PKG_CONFIG_PATH=$HOME/.scarpenter/lib/pkgconfig
   export TERM=xterm-256color

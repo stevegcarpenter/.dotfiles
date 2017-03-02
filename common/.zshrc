@@ -81,22 +81,29 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# export editor
-export EDITOR=vim
-export VISUAL=vim
-
-# if a ranger config file exists, tell ranger to use that
-if [[ -f ~/.config/ranger/rc.conf ]]; then
-  export RANGER_LOAD_DEFAULT_RC=FALSE
-fi
+# editor
+EDITOR=vim
+VISUAL=vim
 
 # This path only exists on OSX
-if [[ -d "/System" ]]; then
+if [[ -d /System ]]; then
   export PATH=$PATH:/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/
 else
-  PATH=/opt/xkl/env/1.2/bin:$PATH
-  PATH=/opt/xkl/tools/bin:$PATH
-  PATH=/opt/xkl/tools:$PATH
+  # Conditionally source some other files/symlinks
+  declare -a zshfiles
+  zshfiles=(~/.zshrc_custom ~/.alias)
+  for f in ${zshfiles[@]}; do
+    if [[ -f $f ]]; then
+      # source it
+      . "$f"
+    fi
+  done
+
+  export LD_LIBRARY_PATH
+  export PKG_CONFIG_PATH
 fi
 
-source ~/.alias
+export SHELL
+export PATH
+export EDITOR
+export VISUAL
