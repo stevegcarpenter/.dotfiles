@@ -1,6 +1,3 @@
 # .bashrc_home: home specific items
 
-PS1='[\u@\h \W]\$ '
-export TERM=xterm-256color
-[ -n  "$TMUX" ] && export TERM=screen-256color
-export BROWSER=google-chrome-stable
+# empty for now...

@@ -98,10 +98,16 @@ else
       . "$f"
     fi
   done
-
-  export LD_LIBRARY_PATH
-  export PKG_CONFIG_PATH
 fi
+
+# set TERM appropriately based on whether TMUX is active
+if [[ -n  "$TMUX" ]]; then
+  export TERM=xterm-256color
+else
+  export TERM=screen-256color
+fi
+
+export BROWSER=google-chrome-stable
 
 export SHELL
 export PATH
