@@ -1,7 +1,10 @@
 # All relevant aliases for Linux
 
-# Always display color
-alias ls="ls --color=auto"
+# This option only exists in Linux. Don't run it on mac.
+if [[ -d /Users ]]; then
+    # Always display color
+    alias ls="ls --color=auto"
+fi
 
 # Display directories
 alias ld="ls -d */"
