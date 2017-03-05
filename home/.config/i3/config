@@ -162,6 +162,7 @@ bindsym $mod+r mode "resize"
 # disable all borders on windows
 for_window [class="^.*"] border pixel 0
 for_window [class="Termite"] border pixel 20
+for_window [class="URxvt"] border pixel 20
 # borders
 # hide_edge_borders both
 
