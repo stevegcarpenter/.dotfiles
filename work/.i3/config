@@ -158,6 +158,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# borders
+for_window [class="^.*"] border pixel 0
+for_window [class="Termite"] border pixel 20
+for_window [class="URxvt"] border pixel 20
+
+
 set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
