@@ -1,0 +1,34 @@
+! ====  Colors  ====
+! main
+URxvt.cursorColor:   #e5e5e5
+URxvt.background:    #5d729f
+URxvt.foreground:    #34405a
+
+! black
+URxvt.color0:        #151520
+URxvt.color8:        #3c3c5c
+! red
+URxvt.color1:        #5e73a0
+URxvt.color9:        #82a0df
+! green
+URxvt.color2:        #5671a0
+URxvt.color10:       #789ee1
+! yellow
+URxvt.color3:        #5b70a0
+URxvt.color11:       #7f9cdf
+! blue
+URxvt.color4:        #4c6ea0
+URxvt.color12:       #6c9ce3
+! magenta
+URxvt.color5:        #7a7fa0
+URxvt.color13:       #a5abd8
+! cyan
+URxvt.color6:        #5471a0
+URxvt.color14:       #769fe1
+! white
+URxvt.color7:        #8581a0
+URxvt.color15:       #b2add7
+
+! Handle Transparency after color definitions
+URxvt*.transparent:true
+URxvt*shading: 20
