@@ -55,6 +55,10 @@ set backup
 set backupdir=~/.backup,.
 set noswapfile
 
+" enable displaying line no along with relative numbers
+set number
+set relativenumber
+
 
 """"""" SuperTab configuration """""""
 "let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
