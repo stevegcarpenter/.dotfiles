@@ -100,6 +100,9 @@ else
   done
 fi
 
+# On all systems, .scarpenter/bin takes precedence in PATH
+PATH=$HOME/.scarpenter/bin
+
 # set TERM appropriately based on whether TMUX is active
 if [[ -n  "$TMUX" ]]; then
   export TERM=screen-256color

@@ -7,7 +7,6 @@ if [[ -d /opt/xkl/env/1.2/bin ]]; then
   # Support new build environment
   PATH=/opt/xkl/tools:$PATH
   PATH=/opt/xkl/tools/bin:$PATH
-  PATH=$HOME/.scarpenter/bin:$PATH
   export LD_LIBRARY_PATH=$HOME/.scarpenter/lib
   export PKG_CONFIG_PATH=$HOME/.scarpenter/lib/pkgconfig
 fi
