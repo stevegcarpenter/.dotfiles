@@ -106,6 +106,8 @@ PATH=$HOME/.scarpenter/bin:$PATH
 # set TERM appropriately based on whether TMUX is active
 if [[ -n  "$TMUX" ]]; then
   export TERM=screen-256color
+elif [[ -n "$SSH_CLIENT" && "$HOST" -eq "argama" ]]
+  export TERM=screen-256color
 else
   export TERM=xterm-256color
 fi
