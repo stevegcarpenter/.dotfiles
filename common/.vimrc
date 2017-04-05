@@ -192,9 +192,6 @@ nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
-" open files fast
-nnoremap <leader>o :CtrlP<CR>
-
 " split window fast
 nnoremap <leader>\| :vsplit<CR>
 nnoremap <leader>- :split<CR>
