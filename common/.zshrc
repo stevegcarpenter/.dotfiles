@@ -89,10 +89,8 @@ VISUAL=vim
 if [[ -d /System ]]; then
   export PATH=$PATH:/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/
 else
-  # Conditionally source some other files/symlinks
-  declare -a zshfiles
-  zshfiles=(~/.zshrc_custom ~/.alias)
-  for f in ${zshfiles[@]}; do
+  # Conditionally source some other dot files/symlinks
+  for f in ~/.customrc/.*; do
     if [[ -f $f ]]; then
       # source it
       . "$f"
