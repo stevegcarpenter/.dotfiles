@@ -202,11 +202,9 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-" open previous file
-nnoremap <leader>p :e#<CR>
-
 " open buffer list, allow selection
 nnoremap <leader><leader>l :buffers<CR>:buffer<Space>
+" open previous file
 nnoremap <leader>b :e#<CR>
 
 " start ag search
