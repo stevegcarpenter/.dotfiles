@@ -31,35 +31,69 @@ filter_unmatched_urls = true
 # emit escape sequences for other keys modified by Control
 #modify_other_keys = false
 
+# colors dot-theme
 [colors]
-#cursor = #dcdccc
-foreground = #dcdccc
-foreground_bold = #ffffff
-#background = #3f3f3f
+# special
+foreground      = #f7eee9
+foreground_bold = #f7eee9
+cursor          = #4286f4
+background      = #272727
+# black
+color0  = #1e1e24
+color8  = #4e5166
+# red
+color1  = #f97560
+color9  = #f97560
+# green
+color2  = #987284
+color10 = #987284
+# yellow
+color3  = #fdbf87
+color11 = #ffd5aa
+# blue
+color4  = #998785
+color12 = #41658a
+# magenta
+color5  = #ad4a3e
+color13 = #ad4a3e
+# cyan
+color6  = #7b8f8e
+color14 = #7b8f8e
+# white
+color7  = #f7c1bb
+color15 = #f7eee9
 
-# 20% background transparency (requires a compositor)
-background = rgba(0, 0, 0, .92)
-
-# if unset, will reverse foreground and background
-highlight = #2f2f2f
-
-# colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #506070
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #c3bf9f
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
-color15 = #ffffff
+# # colors solarized
+# [colors]
+# # special
+# foreground      = #839496
+# foreground_bold = #839496
+# cursor          = #839496
+# background      = #002b36
+# # black
+# color0  = #073642
+# color8  = #002b36
+# # red
+# color1  = #dc322f
+# color9  = #cb4b16
+# # green
+# color2  = #859900
+# color10 = #586e75
+# # yellow
+# color3  = #b58900
+# color11 = #657b83
+# # blue
+# color4  = #268bd2
+# color12 = #839496
+# # magenta
+# color5  = #d33682
+# color13 = #6c71c4
+# # cyan
+# color6  = #2aa198
+# color14 = #93a1a1
+# # white
+# color7  = #eee8d5
+# color15 = #fdf6e3
 
 [hints]
 #font = Monospace 12

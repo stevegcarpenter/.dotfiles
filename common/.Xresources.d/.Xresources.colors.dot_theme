@@ -2,7 +2,7 @@
 !  colors
 URxvt.background: #272727
 URxvt.foreground: #f7eee9
-URxvt.cursorColor: #4286f4
+URxvt.cursorColor: #f7c1bb
 ! black
 URxvt.color0: #1e1e24
 URxvt.color8: #4e5166

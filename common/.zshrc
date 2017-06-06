@@ -10,7 +10,7 @@ fi
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+ZSH_THEME="jaischeema"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -89,10 +89,8 @@ VISUAL=vim
 if [[ -d /System ]]; then
   export PATH=$PATH:/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/
 else
-  # Conditionally source some other files/symlinks
-  declare -a zshfiles
-  zshfiles=(~/.zshrc_custom ~/.alias)
-  for f in ${zshfiles[@]}; do
+  # Conditionally source some other dot files/symlinks
+  for f in ~/.customrc/.*; do
     if [[ -f $f ]]; then
       # source it
       . "$f"
@@ -100,8 +98,13 @@ else
   done
 fi
 
+# On all systems, .scarpenter/bin takes precedence in PATH
+PATH=$HOME/.scarpenter/bin:$PATH
+
 # set TERM appropriately based on whether TMUX is active
 if [[ -n  "$TMUX" ]]; then
+  export TERM=screen-256color
+elif [[ -n "$SSH_CLIENT" && "$HOST" = "argama" ]]; then
   export TERM=screen-256color
 else
   export TERM=xterm-256color
