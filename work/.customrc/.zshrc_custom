@@ -10,3 +10,8 @@ if [[ -d /opt/xkl/env/1.2/bin ]]; then
   export LD_LIBRARY_PATH=$HOME/.scarpenter/lib
   export PKG_CONFIG_PATH=$HOME/.scarpenter/lib/pkgconfig
 fi
+
+if [[ -d $HOME/.scarpenter/python36 ]]; then
+  PATH=$HOME/.scarpenter/python36/bin:$PATH
+fi
+
