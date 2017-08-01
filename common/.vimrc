@@ -1,9 +1,16 @@
 set nocompatible              " be iMproved, required
+
+" Set the leader keys
+let mapleader="\ "
+let maplocalleader="\\"
+
 filetype plugin indent on     " required
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype c setlocal ts=4 sw=4 expandtab
 autocmd Filetype cpp setlocal ts=4 sw=4 expandtab
 autocmd Filetype sdl setlocal ts=4 sw=4 expandtab
+autocmd Filetype python nnoremap <LocalLeader>= :0,$!yapf<CR>
+autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
 
 scriptencoding utf-8
 set encoding=utf-8
@@ -19,7 +26,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " EasyMotion - Allows <leader><leader>(b|e) to jump to (b)eginning or (end)
 " of words.
-Plugin 'easymotion/vim-easymotion'
+" Plugin 'easymotion/vim-easymotion'
 
 Plugin 'rking/ag.vim'      " ag search
 Plugin 'ervandew/supertab' " Tab completion
@@ -27,8 +34,14 @@ Plugin 'ervandew/supertab' " Tab completion
 " Agrigate of python related plugins
 Plugin 'klen/python-mode' " Python code checking plugin
 
+" import sorting plugin
+Plugin 'fisadev/vim-isort'
+
 " Edit multiple lines simultaneously
-Plugin 'terryma/vim-multiple-cursors' " Multiple cursors
+" Plugin 'terryma/vim-multiple-cursors' " Multiple cursors
+
+" formatting
+Plugin 'Chiel92/vim-autoformat'
 
 " Status bar mods
 Plugin 'bling/vim-airline'
@@ -69,9 +82,6 @@ endfunction
 "----------------------------------------------------------------------
 " Key Mappings
 "----------------------------------------------------------------------
-" Set the leader keys
-let mapleader="\ "
-let maplocalleader="\\"
 
 " Remap a key sequence in insert mode to kick me out to normal
 " mode. This makes it so this key sequence can never be typed
@@ -98,6 +108,8 @@ let base16colorspace=256
 " enabled syntax highlighting
 syntax on
 
+" configure sorting of imports
+let g:vim_isort_python_version = 'python3'
 " turn off folding in python-mode
 let g:pymode_folding = 0
 " only allow auto-complete (default will enable docs preview also)¬

@@ -78,6 +78,10 @@ let base16colorspace=256
 " enabled syntax highlighting
 syntax on
 
+" necessary for neovim to use python
+let g:python_host_program='/home/scarpenter/.envs/sw_build-87/bin/python'
+let g:python3_host_program='/home/scarpenter/.envs/sw_build-87/bin/python3'
+
 " turn off folding in python-mode
 let g:pymode_folding = 0
 " only allow auto-complete (default will enable docs preview also)¬
