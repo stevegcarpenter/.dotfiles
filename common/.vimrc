@@ -9,8 +9,8 @@ autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype c setlocal ts=4 sw=4 expandtab
 autocmd Filetype cpp setlocal ts=4 sw=4 expandtab
 autocmd Filetype sdl setlocal ts=4 sw=4 expandtab
-autocmd Filetype python nnoremap <LocalLeader>= :0,$!yapf<CR>
-autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
+autocmd Filetype python nnoremap <leader>= :0,$!yapf<CR>
+autocmd Filetype python nnoremap <leader>i :!isort %<CR><CR>
 
 scriptencoding utf-8
 set encoding=utf-8
@@ -64,9 +64,9 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-set backup
-set backupdir=~/.backup,.
-set noswapfile
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
 
 " enable displaying line no along with relative numbers
 set number
@@ -214,6 +214,8 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+" exit hlmode
+nnoremap <Ctrl>n :nohl<CR>
 " open buffer list, allow selection
 nnoremap <leader><leader>l :buffers<CR>:buffer<Space>
 " open previous file
