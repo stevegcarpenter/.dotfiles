@@ -64,8 +64,19 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+if isdirectory($HOME . '/.vim/.undo') == 0
+    :silent !mkdir -p ~/.vim/.undo >/dev/null 2>&1
+endif
 set undodir=~/.vim/.undo//
+
+if isdirectory($HOME . '/.vim/.backup') == 0
+    :silent !mkdir -p ~/.vim/.backup >/dev/null 2>&1
+endif
 set backupdir=~/.vim/.backup//
+
+if isdirectory($HOME . '/.vim/.swp') == 0
+    :silent !mkdir -p ~/.vim/.swp >/dev/null 2>&1
+endif
 set directory=~/.vim/.swp//
 
 " enable displaying line no along with relative numbers
@@ -150,6 +161,8 @@ set textwidth=78
 set wrapmargin=0
 set colorcolumn=+1
 highlight ColorColumn ctermbg=DarkRed
+set cursorline
+highlight CursorLine cterm=bold
 
 " Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
