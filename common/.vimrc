@@ -34,6 +34,9 @@ Plugin 'ervandew/supertab' " Tab completion
 " Agrigate of python related plugins
 Plugin 'klen/python-mode' " Python code checking plugin
 
+" Mercurial plugin
+Plugin 'phleet/vim-mercenary'
+
 " import sorting plugin
 Plugin 'fisadev/vim-isort'
 
