@@ -1,0 +1,10 @@
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.visualstar": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        }
+    ],
+}
