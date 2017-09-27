@@ -1,4 +1,5 @@
 {
+    "vim.easymotion": true,
     "vim.leader": "<space>",
     "vim.incsearch": true,
     "vim.hlsearch": true,
