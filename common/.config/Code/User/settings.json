@@ -1,10 +1,12 @@
 {
+    "editor.lineNumbers": "relative",
     "vim.easymotion": true,
     "vim.leader": "<space>",
     "vim.incsearch": true,
     "vim.hlsearch": true,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.visualstar": true,
+    "vim.showcmd": true,
     "vim.enableNeovim": true,
     "vim.neovimPath": "/usr/bin/nvim",
     "vim.insertModeKeyBindings": [
@@ -55,4 +57,5 @@
             ]
         }
     ],
+    "window.zoomLevel": 0,
 }
