@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'rking/ag.vim'                   " ag search
 Plug 'phleet/vim-mercenary'           " Mercurial plugin
+Plug 'tpope/vim-fugitive'             " Git plugin
 Plug 'ervandew/supertab'              " Tab completion
 Plug 'python-mode/python-mode'        " Python code checking plugin
 Plug 'bling/vim-airline'              " Status bar mods

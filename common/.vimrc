@@ -9,6 +9,7 @@ Plugin 'rking/ag.vim'                   " ag search
 Plugin 'ervandew/supertab'              " Tab completion
 Plugin 'klen/python-mode'               " Python code checking plugin
 Plugin 'phleet/vim-mercenary'           " Mercurial plugin
+Plugin 'tpope/vim-fugitive'             " Git plugin
 Plugin 'fisadev/vim-isort'              " Python import sorting
 Plugin 'Chiel92/vim-autoformat'         " Auto-format
 Plugin 'bling/vim-airline'              " Status bar mods
