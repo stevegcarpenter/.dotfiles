@@ -82,8 +82,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # editor
-EDITOR=nvim
-VISUAL=nvim
+export EDITOR=nvim
+export VISUAL=nvim
 
 # This path only exists on OSX
 if [[ -d /System ]]; then
@@ -101,6 +101,12 @@ fi
 # On all systems, .scarpenter/bin takes precedence in PATH
 PATH=$HOME/.scarpenter/bin:$PATH
 PATH="${PATH}:${HOME}/.local/bin/"
+export PATH
+
+# Restore wal colors
+(printf $(wal -r -t))
+(neofetch &)
+# (wal -r &)
 
 # set TERM appropriately based on whether TMUX is active
 if [[ -n  "$TMUX" ]]; then
@@ -110,8 +116,4 @@ else
 fi
 
 export BROWSER=google-chrome-stable
-
-export SHELL
-export PATH
-export EDITOR
-export VISUAL
+# export SHELL
