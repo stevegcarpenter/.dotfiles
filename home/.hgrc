@@ -1,5 +1,5 @@
 [ui]
 username = Steve Carpenter <stevegcarpenter@gmail.com>
-editor = vim
+editor = nvim
 
 [alias]
