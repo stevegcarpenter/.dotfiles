@@ -82,8 +82,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # editor
-EDITOR=vim
-VISUAL=vim
+EDITOR=nvim
+VISUAL=nvim
 
 # This path only exists on OSX
 if [[ -d /System ]]; then
@@ -104,8 +104,6 @@ PATH="${PATH}:${HOME}/.local/bin/"
 
 # set TERM appropriately based on whether TMUX is active
 if [[ -n  "$TMUX" ]]; then
-  export TERM=screen-256color
-elif [[ -n "$SSH_CLIENT" && "$HOST" = "argama" ]]; then
   export TERM=screen-256color
 else
   export TERM=xterm-256color
