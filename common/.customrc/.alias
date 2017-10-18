@@ -18,5 +18,8 @@ alias ll="ls -lh"
 # Prefer no-window version
 alias emacs="emacs -nw"
 
-# Use VIM, not VI
-alias vi="vim"
+# Use Vim, not Vi, (backslash prevents recursive alias)
+alias vi="\vim"
+
+# Use NVIM, not VIM
+alias vim="nvim"
