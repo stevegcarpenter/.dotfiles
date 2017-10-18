@@ -1,6 +1,6 @@
 " Source all files containing config settings, plugins, plugin settings, etc
-source ~/.vim.nvim.d/.common.vim      " Common settings between vim/nvim
-source ~/.vim.nvim.d/.plug.vim        " Plugins for vim/nvim
-source ~/.vim.nvim.d/.plug.set.vim    " Plugin settings for vim/nvim
-source ~/.vim.nvim.d/.keymap.vim      " Keymap settings for vim/nvim
-source ~/.vim.nvim.d/.func.vim        " Custom functions for vim/nvim
+source ~/.vim.nvim.d/.settings.rc      " Common settings between vim/nvim
+source ~/.vim.nvim.d/.plug.rc          " Plugins for vim/nvim
+source ~/.vim.nvim.d/.plug.set.rc      " Plugin settings for vim/nvim
+source ~/.vim.nvim.d/.keymap.rc        " Keymap settings for vim/nvim
+source ~/.vim.nvim.d/.func.rc          " Custom functions for vim/nvim
