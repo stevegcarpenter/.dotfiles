@@ -1,10 +1,4 @@
-# Path to your oh-my-zsh installation.
-# conditionalize on OSX or linux
-if [[ -d "/Users" ]]; then
-  export ZSH=/Users/stevencarpenter/.oh-my-zsh
-else
-  export ZSH=/home/scarpenter/.oh-my-zsh
-fi
+export ZSH=/home/scarpenter/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -85,18 +79,13 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=nvim
 export VISUAL=nvim
 
-# This path only exists on OSX
-if [[ -d /System ]]; then
-  export PATH=$PATH:/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/
-else
-  # Conditionally source some other dot files/symlinks
-  for f in ~/.customrc/.*; do
-    if [[ -f $f ]]; then
-      # source it
-      . "$f"
-    fi
-  done
-fi
+# Conditionally source some other dot files/symlinks
+for f in ~/.system/.*; do
+  if [[ -f $f ]]; then
+    # source it
+    . "$f"
+  fi
+done
 
 # On all systems, .scarpenter/bin takes precedence in PATH
 PATH=$HOME/.scarpenter/bin:$PATH
@@ -106,7 +95,6 @@ export PATH
 # Restore wal colors
 (printf $(wal -r -t))
 (neofetch &)
-# (wal -r &)
 
 # set TERM appropriately based on whether TMUX is active
 if [[ -n  "$TMUX" ]]; then

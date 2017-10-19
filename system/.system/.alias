@@ -1,0 +1,40 @@
+# All relevant aliases for Linux
+
+# This option only exists in Linux. Don't run it on mac.
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colorflag="--color"
+else # macOS `ls`
+    colorflag="-G"
+fi
+
+# Display directories
+alias ld="ls ${colorflag} -d */"
+
+# List all files in long colorized format
+alias la="ls -laF ${colorflag}"
+
+# Display hidden files
+alias lh="ls -a ${colorflag} | grep '^\.'"
+
+# Display files with details
+alias ll="ls -lh ${colorflag}"
+
+# List all files in colorized long format
+alias l="ls -lF ${colorflag}"
+
+# Grep with color
+alias grep="grep --color=auto"
+
+# Prefer no-window version
+alias emacs="emacs -nw"
+
+# Use Vim, not Vi, (backslash prevents recursive alias)
+alias vi="\vim"
+
+# Use NVIM, not VIM
+alias vim="nvim"
+
+# Shortcuts
+alias dl="cd ~/Downloads"
+alias c="cd ~/code"
+

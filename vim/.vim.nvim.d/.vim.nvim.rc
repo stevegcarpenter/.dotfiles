@@ -1,0 +1,24 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent call system('mkdir -p ~/.vim/{autoload,plugged,undo,backup,swp}')
+  silent call system('curl -fLo ~/.vim/autoload/plug.vim https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+  execute 'source ~/.vim/autoload/plug.vim'
+  augroup plugsetup
+    autocmd!
+    autocmd VimEnter * PlugInstall
+  augroup end
+endif
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent call system('mkdir -p ~/.local/share/nvim/site/autoload/')
+  silent call system('-fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim')
+  augroup plugsetup
+    autocmd!
+    autocmd VimEnter * PlugInstall
+  augroup end
+endif
+  
+" Source all files containing config settings, plugins, plugin settings, etc
+source ~/.vim.nvim.d/.settings.rc      " Common settings between vim/nvim
+source ~/.vim.nvim.d/.plug.rc          " Plugins for vim/nvim
+source ~/.vim.nvim.d/.plug.set.rc      " Plugin settings for vim/nvim
+source ~/.vim.nvim.d/.keymap.rc        " Keymap settings for vim/nvim
+source ~/.vim.nvim.d/.func.rc          " Custom functions for vim/nvim
