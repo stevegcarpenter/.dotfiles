@@ -37,4 +37,5 @@ alias vim="nvim"
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias c="cd ~/code"
+alias .="cd ~/.dotfiles"
 
