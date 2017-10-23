@@ -1,4 +1,5 @@
 {
+    "editor.rulers": [ 78 ],
     "editor.lineNumbers": "relative",
     "vim.easymotion": true,
     "vim.leader": "<space>",
