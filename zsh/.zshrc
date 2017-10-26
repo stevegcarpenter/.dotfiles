@@ -92,8 +92,6 @@ PATH=$HOME/.scarpenter/bin:$PATH
 PATH="${PATH}:${HOME}/.local/bin/"
 export PATH
 
-# Restore wal colors
-(printf $(wal -r -t))
 (neofetch &)
 
 # set TERM appropriately based on whether TMUX is active
