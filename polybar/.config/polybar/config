@@ -1,0 +1,184 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[colors]
+background     = #ff1d2021
+foreground     = #a0ebdbb2
+foreground-alt = #90665c54
+primary        = #ffb52a
+secondary      = #e60053
+alert          = #bd2c40
+white          = #fbf1c7
+red            = #cc241d
+green          = #98971a
+yellow         = #d79921
+blue           = #458588
+purple         = #b16286
+aqua           = #689d6a
+orange         = #d65d0e
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Only used for mutual elements between primary & extmon bars
+[bar/base]
+scroll-up           = i3wm-wsnext
+scroll-down         = i3wm-wsprev
+width               = 100%
+offset-x            = 0
+offset-y            = 0
+radius-top          = 0
+radius-bottom       = 0
+fixed-center        = true
+background          = ${colors.background}
+foreground          = ${colors.foreground}
+padding-left        = 0
+padding-right       = 2
+module-margin-left  = 1
+module-margin-right = 1
+font-0              = Archivo Regular:pixelsize=11;2
+font-1              = FontAwesome:pixelsize=11;2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[bar/primary]
+inherit = bar/base
+monitor             = eDP1
+height              = 23
+modules-left        = i3
+modules-center      = date
+modules-right       = wlan cpu memory xbacklight volume battery
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[bar/extmon]
+inherit = bar/base
+monitor             = HDMI1
+height              = 21
+modules-left        = i3
+modules-center      = date
+modules-right       = wlan cpu memory volume battery
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/i3]
+type                       = internal/i3
+pin-workspaces             = true
+format                     = <label-mode> <label-state>
+label-focused              = %index%: 
+label-focused-foreground   = ${colors.green}
+label-focused-padding      = 1
+label-unfocused            = %index%: 
+label-unfocused-foreground = ${colors.foreground-alt}
+label-unfocused-padding    = 1
+label-urgent               = %index%: 
+label-urgent-foreground    = ${colors.orange}
+label-urgent-padding       = 1
+label-visible              = %index%: 
+label-visible-foreground   = ${colors.foreground-alt}
+label-visible-padding      = 1
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/xbacklight]
+type              = internal/xbacklight
+format            = <ramp> <label>
+label             = %percentage%
+ramp-0            = 
+ramp-0-foreground = ${colors.red}
+ramp-1            = 
+ramp-1-foreground = ${colors.yellow}
+ramp-2            = 
+ramp-2-foreground = ${colors.yellow}
+ramp-3            = 
+ramp-3-foreground = ${colors.green}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/wlan]
+type                              = internal/network
+interface                         = wlp2s0
+interval                          = 6
+ping-interval                     = 6
+format-connected                  = <ramp-signal> <label-connected>
+format-packetloss                 = <animation-packetloss> <label-connected>
+label-connected                   = %essid%
+ramp-signal-0                     = 
+ramp-signal-0-foreground          = ${colors.red}
+ramp-signal-1                     = 
+ramp-signal-1-foreground          = ${colors.yellow}
+ramp-signal-2                     = 
+ramp-signal-2-foreground          = ${colors.green}
+animation-packetloss-0            = 
+animation-packetloss-0-foreground = ${colors.yellow}
+animation-packetloss-1            = 
+animation-packetloss-1-foreground = ${colors.background}
+animation-packetloss-framerate    = 1000
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/date]
+type                     = internal/date
+interval                 = 1
+time                     = %H:%M
+date                     = "%A, %e %B"
+format-prefix-foreground = ${colors.aqua}
+label                    = %date% %time%
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/volume]
+type                     = internal/volume
+format-volume            = <ramp-volume> <label-volume>
+label-volume             = %percentage%
+label-muted              =  00
+label-muted-foreground   = ${colors.orange}
+ramp-volume-0            = 
+ramp-volume-0-foreground = ${colors.red}
+ramp-volume-1            = 
+ramp-volume-1-foreground = ${colors.yellow}
+ramp-volume-2            = 
+ramp-volume-2-foreground = ${colors.green}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/battery]
+type                              = internal/battery
+poll-interval                     = 30
+battery                           = BAT0
+adapter                           = AC
+full-at                           = 96
+format-full                       = <label-full>
+format-full-prefix                = " "
+format-full-prefix-foreground     = ${colors.green}
+label-full                        = %percentage%
+format-charging                   = <label-charging>
+format-charging-prefix            = " "
+format-charging-prefix-foreground = ${colors.yellow}
+label-charging                    = %percentage%
+format-discharging                = <ramp-capacity> <label-discharging>
+label-discharging                 = %time%
+ramp-capacity-0                   = 
+ramp-capacity-0-background        = ${colors.red}
+ramp-capacity-0-foreground        = ${colors.white}
+ramp-capacity-1                   = 
+ramp-capacity-1-foreground        = ${colors.red}
+ramp-capacity-2                   = 
+ramp-capacity-2-foreground        = ${colors.yellow}
+ramp-capacity-3                   = 
+ramp-capacity-3-foreground        = ${colors.green}
+ramp-capacity-4                   = 
+ramp-capacity-4-foreground        = ${colors.green}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/memory]
+type             = internal/memory
+interval         = 3
+format           = <label>
+label            =  %gb_free%
+label-foreground = ${colors.blue}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[settings]
+screenchange-reload = true
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[global/wm]
+margin-top    = 5
+margin-bottom = 5
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[module/cpu]
+type             = internal/cpu
+interval         = 1
+format           = <label>
+label            =  %percentage%
+label-foreground = ${colors.aqua}
