@@ -188,10 +188,10 @@ bindsym $mod+d exec rofi -show run
 bindsym $mod+shift+x exec i3lock --color "$bg-color"
 
 # programs to run at startup
-exec_always nitrogen --restore
 exec google-chrome-stable
 exec compton -f
 exec_always xrdb ~/.Xresources &
 exec pulseaudio --start
 exec_always ~/.screenlayout/layout.sh
+exec_always nitrogen --restore
 exec_always ~/.config/polybar/polybar.sh &
