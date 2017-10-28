@@ -6,6 +6,7 @@ call plug#begin(g:pluginpath)
 Plug 'rking/ag.vim'                   " ag search
 Plug 'Chiel92/vim-autoformat'         " Auto-format code
 Plug 'phleet/vim-mercenary'           " Mercurial plugin
+Plug 'junegunn/vim-easy-align'        " Align columns
 Plug 'tpope/vim-fugitive'             " Git plugin
 Plug 'tpope/vim-surround'             " Assist in editing/adding surrounds
 Plug 'ervandew/supertab'              " Tab completion
