@@ -185,8 +185,7 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle # mute sound
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 bindsym $mod+d exec rofi -show run
-bindsym $mod+shift+x exec --no-startup-id "i3lock -i ~/.wallpapers/arch_wallpaper.png"
-bindsym $mod+p exec /home/scarpenter/.i3/i3lock-multimonitor/lock
+bindsym $mod+shift+x exec --no-startup-id i3lock -i ~/.wallpapers/arch_wallpaper.png
 
 # programs to run at startup
 exec google-chrome-stable

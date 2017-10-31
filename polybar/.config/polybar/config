@@ -42,7 +42,7 @@ monitor             = eDP1
 height              = 23
 modules-left        = i3
 modules-center      = date
-modules-right       = wlan cpu memory xbacklight volume battery
+modules-right       = wlan cpu memory volume xbacklight battery
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [bar/extmon]
