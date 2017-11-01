@@ -83,14 +83,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-# set $workspace1 "1: "
-# set $workspace2 "2: "
-# set $workspace3 "3: "
-
 # switch to workspace
-# bindsym $mod+1 workspace $workspace1
-# bindsym $mod+2 workspace $workspace2
-# bindsym $mod+3 workspace $workspace3
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -152,9 +145,9 @@ bindsym $mod+r mode "resize"
 # <======== i3 gaps ========
 #
 # disable all borders on windows
-for_window [class="^.*"] border pixel 0
-for_window [class="Termite"] border pixel 20
-for_window [class="URxvt"] border pixel 20
+for_window [class="^.*"] border pixel 2
+# for_window [class="Termite"] border pixel 20
+# for_window [class="URxvt"] border pixel 20
 # borders
 # hide_edge_borders both
 
@@ -169,10 +162,11 @@ set $inactive-bg-color   #272727
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
 set $urgent-bg-color     #E53935
+set $arc-blue            #5294e2
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $bg-color
+client.focused          $bg-color           $arc-blue          $text-color          $bg-color
 client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color  $bg-color
 client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color  $bg-color
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $bg-color
@@ -186,6 +180,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 bindsym $mod+d exec rofi -show run
 bindsym $mod+shift+x exec --no-startup-id i3lock -i ~/.wallpapers/arch_wallpaper.png
+bindsym $mod+shift+p exec setxkbmap -option ctrl:nocaps
 
 # programs to run at startup
 exec google-chrome-stable
