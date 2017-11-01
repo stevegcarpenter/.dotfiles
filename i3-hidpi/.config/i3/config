@@ -184,7 +184,7 @@ bindsym $mod+shift+p exec setxkbmap -option ctrl:nocaps
 
 # programs to run at startup
 exec google-chrome-stable
-exec compton -f
+exec_always "compton --config ~/.config/compton/compton.conf &"
 exec --no-startup-id "i3lock -i ~/.wallpapers/arch_wallpaper.png &"
 exec_always xrdb ~/.Xresources &
 exec pulseaudio --start
