@@ -132,7 +132,7 @@ ramp-volume-2-foreground = ${colors.green}
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/battery]
 type                              = internal/battery
-poll-interval                     = 30
+poll-interval                     = 10
 battery                           = BAT0
 adapter                           = AC
 full-at                           = 96

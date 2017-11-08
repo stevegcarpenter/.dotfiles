@@ -1,5 +1,7 @@
 #include ".Xresources.d/.Xresources.colors"
 #include ".Xresources.d/.Xresources.rofi"
+! Change cursor size
+Xcursor.size: 12
 
 ! Disable bold font in URxvt / XTerm
 URxvt.font: xft:monospace:size=8

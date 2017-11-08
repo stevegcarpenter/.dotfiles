@@ -24,6 +24,7 @@ alias l="ls -lF ${colorflag}"
 
 # Grep with color
 alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
 
 # Prefer no-window version
 alias emacs="emacs -nw"
@@ -38,4 +39,4 @@ alias vim="nvim"
 alias dl="cd ~/Downloads"
 alias c="cd ~/code"
 alias .="cd ~/.dotfiles"
-
+alias cf="cd ~/codefellows"

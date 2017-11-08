@@ -4,7 +4,8 @@ export ZSH=/home/scarpenter/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jaischeema"
+# ZSH_THEME="jaischeema"
+ZSH_THEME="half-life"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -90,6 +91,11 @@ done
 # On all systems, .scarpenter/bin takes precedence in PATH
 PATH=$HOME/.scarpenter/bin:$PATH
 PATH="${PATH}:${HOME}/.local/bin/"
+
+# check here for node_modules
+PATH=$HOME/.node_modules/bin:$PATH
+export npm_config_prefix=$HOME/.node_modules
+
 export PATH
 
 (neofetch &)

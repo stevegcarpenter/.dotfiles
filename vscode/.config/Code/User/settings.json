@@ -2,6 +2,7 @@
     "editor.rulers": [ 78 ],
     "editor.lineNumbers": "relative",
     "editor.fontSize": 12,
+    "tslint.jsEnable": true,
     "scrolloff.scrolloff": 5,
     "vim.history": 50,
     "vim.easymotion": true,
@@ -53,5 +54,6 @@
     ],
     "window.zoomLevel": 0,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "1337",
+    "workbench.colorTheme": "Ayu Dark",
+    "material-icon-theme.showUpdateMessage": false,
 }
