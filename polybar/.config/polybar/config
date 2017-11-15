@@ -1,6 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [colors]
-background     = #ff1d2021
+; background     = #ff1d2021
+background     = #111111
 foreground     = #a0ebdbb2
 foreground-alt = #90665c54
 white          = #fbf1c7
@@ -83,7 +84,7 @@ ramp-1-foreground = ${colors.yellow}
 ramp-2            = 
 ramp-2-foreground = ${colors.yellow}
 ramp-3            = 
-ramp-3-foreground = ${colors.green}
+ramp-3-foreground = ${colors.lightgreen}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/wlan]
@@ -138,7 +139,7 @@ adapter                           = AC
 full-at                           = 96
 format-full                       = <label-full>
 format-full-prefix                = " "
-format-full-prefix-foreground     = ${colors.lightgreen}
+format-full-prefix-foreground     = ${colors.green}
 label-full                        = %percentage%
 format-charging                   = <label-charging>
 format-charging-prefix            = " "
@@ -154,9 +155,9 @@ ramp-capacity-1-foreground        = ${colors.red}
 ramp-capacity-2                   = 
 ramp-capacity-2-foreground        = ${colors.yellow}
 ramp-capacity-3                   = 
-ramp-capacity-3-foreground        = ${colors.lightgreen}
+ramp-capacity-3-foreground        = ${colors.green}
 ramp-capacity-4                   = 
-ramp-capacity-4-foreground        = ${colors.lightgreen}
+ramp-capacity-4-foreground        = ${colors.green}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/memory]
