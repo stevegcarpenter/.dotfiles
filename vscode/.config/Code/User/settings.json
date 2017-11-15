@@ -1,8 +1,17 @@
 {
-    "editor.rulers": [ 78 ],
+    "prettier.eslintIntegration": true,
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "editor.rulers": [ 78, 120, 160 ],
     "editor.lineNumbers": "relative",
     "editor.fontSize": 12,
-    "tslint.jsEnable": true,
     "scrolloff.scrolloff": 5,
     "vim.history": 50,
     "vim.easymotion": true,
@@ -52,8 +61,9 @@
             ]
         }
     ],
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Ayu Dark",
     "material-icon-theme.showUpdateMessage": false,
+    "vim.disableExtension": false,
 }
