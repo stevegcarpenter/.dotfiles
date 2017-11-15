@@ -12,8 +12,14 @@ Plug 'tpope/vim-surround'             " Assist in editing/adding surrounds
 Plug 'ervandew/supertab'              " Tab completion
 Plug 'python-mode/python-mode'        " Python code checking plugin
 Plug 'bling/vim-airline'              " Status bar mods
-Plug 'thirtythreeforty/lessspace.vim' " Remove eol whitespace
 Plug 'wesQ3/vim-windowswap'           " Yank/paste splits
 Plug 'fisadev/vim-isort'              " Python import sorting
+Plug 'scrooloose/nerdtree'            " Nerdtree file browser
+Plug 'severin-lemaignan/vim-minimap'  " Minimap of the code
+Plug 'mattn/emmet-vim'                " Emmit HTML shortcuts
+Plug 'Valloric/MatchTagAlways'        " Highlight opening and closing tags
+Plug 'vim-scripts/loremipsum'         " Text generator
+Plug 'flazz/vim-colorschemes'         " Color schemes
+Plug 'trevordmiller/nova-vim'         " Nova color scheme
 
 call plug#end()

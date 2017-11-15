@@ -24,6 +24,9 @@ nnoremap <leader><leader>l :buffers<CR>:buffer<Space>
 " open previous file
 nnoremap <leader>b :e#<CR>
 
+" start Nerdtree
+nnoremap <leader>O :NERDTree<CR>
+
 " start ag search
 nnoremap <leader>/ :Ag<Space>
 

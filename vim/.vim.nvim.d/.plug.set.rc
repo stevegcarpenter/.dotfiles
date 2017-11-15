@@ -13,3 +13,12 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" Enable showing hidden files
+let NERDTreeShowHidden=1
+
+" Select colorscheme
+colorscheme Chasing_Logic
+highlight ColorColumn ctermbg=Blue
+highlight ExtraWhitespace ctermbg=Blue
+match ExtraWhitespace /\s\+$/

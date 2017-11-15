@@ -2,14 +2,23 @@
 "-----------------------------------------------------------------------------
 set nocompatible              " Not comptible with Vi, always set first.
 filetype plugin indent on     " required
-autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
-autocmd Filetype c    setlocal ts=4 sw=4 expandtab
-autocmd Filetype cpp  setlocal ts=4 sw=4 expandtab
-autocmd Filetype sdl  setlocal ts=4 sw=4 expandtab
+
+setlocal ts=4 sw=4 expandtab  " default file settings
+" filetype specific file settings ------------------ {{{
+augroup filetype_specific
+    autocmd!
+    autocmd Filetype ruby       setlocal ts=2 sw=2 expandtab
+    autocmd Filetype javascript setlocal ts=2 sw=2 cc=78,120,160 expandtab
+    autocmd Filetype html       setlocal ts=2 sw=2 cc=78,120,160 expandtab
+    autocmd Filetype css        setlocal ts=2 sw=2 cc=78,120,160 expandtab
+    autocmd Filetype c          setlocal ts=4 sw=4 tw=78 cc=78 expandtab
+    autocmd Filetype cpp        setlocal ts=4 sw=4 tw=78 cc=78 expandtab
+    autocmd Filetype markdown   setlocal ts=2 sw=4 tw=78 cc=78,120,160 expandtab
+augroup END
+" }}}
 
 set encoding=utf-8
 scriptencoding utf-8
-" let base16colorspace=256 " Fix color in urxvt (base16-vim plugin)
 syntax on                " enable syntax highlighting
 set background=dark
 set number               " show line numbers
@@ -25,13 +34,10 @@ set listchars=eol:¬,tab:¶_,extends:>,precedes:<
 set ruler                " display cursor position in status line
 set laststatus=2         " always display status line
 set scrolloff=5          " scroll when cursor is 5 lines from top/bottom
-set textwidth=78
-set wrapmargin=0
-set colorcolumn=+1
-highlight ColorColumn ctermbg=DarkRed
 set confirm              " ask to save when exiting unsaved files
 set noshowmode           " disable mode status since airline does this
-set splitright           " More natural splits
+set splitright           " more natural splits
+set t_Co=256             " allow 256-color support
 
 " undo files
 if isdirectory($HOME . '/.vim/undo') == 0
