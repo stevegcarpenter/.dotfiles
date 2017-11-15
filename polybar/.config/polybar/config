@@ -3,17 +3,17 @@
 background     = #ff1d2021
 foreground     = #a0ebdbb2
 foreground-alt = #90665c54
-primary        = #ffb52a
-secondary      = #e60053
-alert          = #bd2c40
 white          = #fbf1c7
-red            = #cc241d
-green          = #98971a
-yellow         = #d79921
-blue           = #458588
-purple         = #b16286
-aqua           = #689d6a
 orange         = #d65d0e
+pink           = #c11b53
+red            = #8b2b24
+purple         = #571b61
+blue           = #0494d5
+green          = #244425
+lightgreen     = #83b846
+yellow         = #afa766
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Only used for mutual elements between primary & extmon bars
@@ -59,7 +59,7 @@ type                       = internal/i3
 pin-workspaces             = true
 format                     = <label-mode> <label-state>
 label-focused              = %index%: 
-label-focused-foreground   = ${colors.green}
+label-focused-foreground   = ${colors.purple}
 label-focused-padding      = 1
 label-unfocused            = %index%: 
 label-unfocused-foreground = ${colors.foreground-alt}
@@ -99,7 +99,7 @@ ramp-signal-0-foreground          = ${colors.red}
 ramp-signal-1                     = 
 ramp-signal-1-foreground          = ${colors.yellow}
 ramp-signal-2                     = 
-ramp-signal-2-foreground          = ${colors.green}
+ramp-signal-2-foreground          = ${colors.pink}
 animation-packetloss-0            = 
 animation-packetloss-0-foreground = ${colors.yellow}
 animation-packetloss-1            = 
@@ -138,7 +138,7 @@ adapter                           = AC
 full-at                           = 96
 format-full                       = <label-full>
 format-full-prefix                = " "
-format-full-prefix-foreground     = ${colors.green}
+format-full-prefix-foreground     = ${colors.lightgreen}
 label-full                        = %percentage%
 format-charging                   = <label-charging>
 format-charging-prefix            = " "
@@ -154,9 +154,9 @@ ramp-capacity-1-foreground        = ${colors.red}
 ramp-capacity-2                   = 
 ramp-capacity-2-foreground        = ${colors.yellow}
 ramp-capacity-3                   = 
-ramp-capacity-3-foreground        = ${colors.green}
+ramp-capacity-3-foreground        = ${colors.lightgreen}
 ramp-capacity-4                   = 
-ramp-capacity-4-foreground        = ${colors.green}
+ramp-capacity-4-foreground        = ${colors.lightgreen}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [module/memory]
@@ -181,4 +181,4 @@ type             = internal/cpu
 interval         = 1
 format           = <label>
 label            =  %percentage%
-label-foreground = ${colors.aqua}
+label-foreground = ${colors.red}
