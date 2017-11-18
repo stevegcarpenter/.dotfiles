@@ -32,6 +32,9 @@ alias emacs="emacs -nw"
 # Use Vim, not Vi, (backslash prevents recursive alias)
 alias vi="\vim"
 
+# pacman shortcut
+alias pac="sudo pacman"
+
 # Use NVIM, not VIM
 alias vim="nvim"
 
