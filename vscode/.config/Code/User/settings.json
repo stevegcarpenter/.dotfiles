@@ -9,6 +9,9 @@
     "[python]": {
         "editor.tabSize": 4
     },
+    "[css]": {
+        "editor.tabSize": 2
+    }
     "editor.rulers": [ 78, 120, 160 ],
     "editor.lineNumbers": "relative",
     "editor.fontSize": 12,
