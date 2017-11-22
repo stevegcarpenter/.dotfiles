@@ -212,3 +212,4 @@ exec_always nitrogen --restore
 exec_always ~/.config/polybar/polybar.sh &
 exec xautolock -time 5 -locker  "i3lock -i ~/.wallpapers/arch_wallpaper.png" &
 exec setxkbmap -option ctrl:nocaps
+exec .scripts/xflux.sh &
