@@ -19,11 +19,11 @@ augroup END
 
 set encoding=utf-8
 scriptencoding utf-8
-syntax on                " enable syntax highlighting
+syntax on                   " enable syntax highlighting
 set background=dark
-set number               " show line numbers
-set relativenumber       " display line numbers relative to cursor position
-set hidden               " allow switching to new buffer w/o saving changes
+set number                  " show line numbers
+set relativenumber          " display line numbers relative to cursor position
+set hidden                  " allow switching to new buffer w/o saving changes
 set hlsearch
 set incsearch
 set ignorecase
@@ -31,13 +31,14 @@ set smartcase
 set autoindent
 set list
 set listchars=eol:¬,tab:¶_,extends:>,precedes:<
-set ruler                " display cursor position in status line
-set laststatus=2         " always display status line
-set scrolloff=5          " scroll when cursor is 5 lines from top/bottom
-set confirm              " ask to save when exiting unsaved files
-set noshowmode           " disable mode status since airline does this
-set splitright           " more natural splits
-set t_Co=256             " allow 256-color support
+set ruler                   " display cursor position in status line
+set laststatus=2            " always display status line
+set scrolloff=5             " scroll when cursor is 5 lines from top/bottom
+set confirm                 " ask to save when exiting unsaved files
+set noshowmode              " disable mode status since airline does this
+set splitright              " more natural splits
+set t_Co=256                " allow 256-color support
+set spell spelllang=en_us   " spellcheck
 
 " undo files
 if isdirectory($HOME . '/.vim/undo') == 0
