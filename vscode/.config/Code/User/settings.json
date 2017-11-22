@@ -14,7 +14,6 @@
     "vim.leader": "<space>",
     "vim.incsearch": true,
     "vim.hlsearch": true,
-    "vim.disableAnnoyingNeovimMessage": true,
     "vim.visualstar": true,
     "vim.showcmd": true,
     "vim.enableNeovim": true,
