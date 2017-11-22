@@ -1,17 +1,10 @@
 {
     "prettier.eslintIntegration": true,
-    "[javascript]": {
-        "editor.tabSize": 2
-    },
-    "[html]": {
-        "editor.tabSize": 2
-    },
+    "editor.tabSize": 2,
     "[python]": {
         "editor.tabSize": 4
     },
-    "[css]": {
-        "editor.tabSize": 2
-    }
+    "cSpell.language": "en",
     "editor.rulers": [ 78, 120, 160 ],
     "editor.lineNumbers": "relative",
     "editor.fontSize": 12,
