@@ -31,69 +31,44 @@ filter_unmatched_urls = true
 # emit escape sequences for other keys modified by Control
 #modify_other_keys = false
 
-# colors dot-theme
 [colors]
-# special
-foreground      = #f7eee9
-foreground_bold = #f7eee9
-cursor          = #4286f4
-background      = #272727
-# black
-color0  = #1e1e24
-color8  = #4e5166
-# red
-color1  = #f97560
-color9  = #f97560
-# green
-color2  = #987284
-color10 = #987284
-# yellow
-color3  = #fdbf87
-color11 = #ffd5aa
-# blue
-color4  = #998785
-color12 = #41658a
-# magenta
-color5  = #ad4a3e
-color13 = #ad4a3e
-# cyan
-color6  = #7b8f8e
-color14 = #7b8f8e
-# white
-color7  = #f7c1bb
-color15 = #f7eee9
+foreground = #d8dee8
+background = #2f343f
+foreground_bold = #d0d6e0
+cursor = #b48ead
+cursor_foreground = #d8dee8
 
-# # colors solarized
-# [colors]
-# # special
-# foreground      = #839496
-# foreground_bold = #839496
-# cursor          = #839496
-# background      = #002b36
-# # black
-# color0  = #073642
-# color8  = #002b36
-# # red
-# color1  = #dc322f
-# color9  = #cb4b16
-# # green
-# color2  = #859900
-# color10 = #586e75
-# # yellow
-# color3  = #b58900
-# color11 = #657b83
-# # blue
-# color4  = #268bd2
-# color12 = #839496
-# # magenta
-# color5  = #d33682
-# color13 = #6c71c4
-# # cyan
-# color6  = #2aa198
-# color14 = #93a1a1
-# # white
-# color7  = #eee8d5
-# color15 = #fdf6e3
+# black
+color0  = #4b5262
+color8  = #434a5a
+
+# red
+color1  = #bf616a
+color9  = #b3555e
+
+# green
+color2  = #a3be8c
+color10 = #93ae7c
+
+# yellow
+color3  = #ebcb8b
+color11 = #dbbb7b
+
+# blue
+color4  = #81a1c1
+color12 = #7191b1
+
+# magenta
+color5  = #b48ead
+color13 = #a6809f
+
+# cyan
+color6  = #88c0d0
+color14 = #76aebe
+
+# white
+color7  = #e5e9f0
+color15 = #d1d5dc
 
 [hints]
 #font = Monospace 12

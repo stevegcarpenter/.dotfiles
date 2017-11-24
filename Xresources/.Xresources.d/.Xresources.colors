@@ -1,32 +1,74 @@
-! https://github.com/coleifer/dot-theme
-!  colors
-URxvt.background: #272727
-URxvt.foreground: #f7eee9
-URxvt.cursorColor: #4286f4
+! ------------------------------------------------------------------------------
+! Nord Color Scheme
+! By Arctic Ice Studio 
+! ------------------------------------------------------------------------------
+
+! special
+*.foreground:   #d8dee8
+*.background:   #2f343f
+*.cursorColor:  #b48ead
+
 ! black
-URxvt.color0: #1e1e24
-URxvt.color8: #4e5166
+*.color0  : #4b5262
+*.color8  : #434a5a
+
 ! red
-URxvt.color1: #f97560
-URxvt.color9: #f97560
+*.color1  : #bf616a
+*.color9  : #b3555e
+
 ! green
-URxvt.color2: #987284
-URxvt.color10: #987284
+*.color2  : #a3be8c
+*.color10 : #93ae7c
+
 ! yellow
-URxvt.color3: #fdbf87
-URxvt.color11: #ffd5aa
+*.color3  : #ebcb8b
+*.color11 : #dbbb7b
+
 ! blue
-URxvt.color4: #998785
-URxvt.color12: #41658a
+*.color4  : #81a1c1
+*.color12 : #7191b1
+
 ! magenta
-URxvt.color5: #ad4a3e
-URxvt.color13: #ad4a3e
+*.color5  : #b48ead
+*.color13 : #a6809f
+
 ! cyan
-URxvt.color6: #7b8f8e
-URxvt.color14: #7b8f8e
+*.color6  : #93e5cc
+*.color14 : #7bcdb4
+
 ! white
-URxvt.color7: #f7c1bb
-URxvt.color15: #f7eee9
-! underline when default
-URxvt.colorIT: #998785
-URxvt.colorUL: #7b8f8e
+*.color7  : #e5e9f0
+*.color15 : #d1d5dc
+
+! ! https://github.com/coleifer/dot-theme
+! !  colors
+! URxvt.background: #272727
+! URxvt.foreground: #f7eee9
+! URxvt.cursorColor: #4286f4
+! ! black
+! URxvt.color0: #1e1e24
+! URxvt.color8: #4e5166
+! ! red
+! URxvt.color1: #f97560
+! URxvt.color9: #f97560
+! ! green
+! URxvt.color2: #987284
+! URxvt.color10: #987284
+! ! yellow
+! URxvt.color3: #fdbf87
+! URxvt.color11: #ffd5aa
+! ! blue
+! URxvt.color4: #998785
+! URxvt.color12: #41658a
+! ! magenta
+! URxvt.color5: #ad4a3e
+! URxvt.color13: #ad4a3e
+! ! cyan
+! URxvt.color6: #7b8f8e
+! URxvt.color14: #7b8f8e
+! ! white
+! URxvt.color7: #f7c1bb
+! URxvt.color15: #f7eee9
+! ! underline when default
+! URxvt.colorIT: #998785
+! URxvt.colorUL: #7b8f8e
