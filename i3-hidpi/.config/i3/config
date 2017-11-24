@@ -200,6 +200,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 bindsym $mod+d exec rofi -show run
 bindsym $mod+shift+x exec $Locker
+bindsym $mod+shift+f exec thunar
 
 # programs to run at startup
 exec google-chrome-stable
