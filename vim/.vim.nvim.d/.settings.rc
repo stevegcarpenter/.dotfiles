@@ -30,7 +30,7 @@ set ignorecase
 set smartcase
 set autoindent
 set list
-set listchars=eol:¬,tab:¶_,extends:>,precedes:<
+set listchars=tab:¶_,extends:>,precedes:<
 set ruler                   " display cursor position in status line
 set laststatus=2            " always display status line
 set scrolloff=5             " scroll when cursor is 5 lines from top/bottom
