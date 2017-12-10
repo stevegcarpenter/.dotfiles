@@ -89,7 +89,7 @@ done
 
 # On all systems, .scarpenter/bin takes precedence in PATH
 PATH=$HOME/.scarpenter/bin:$PATH
-PATH="${PATH}:${HOME}/.local/bin/"
+PATH="${PATH}:${HOME}/.local/bin"
 
 # check here for node_modules
 PATH=$HOME/.node_modules/bin:$PATH
