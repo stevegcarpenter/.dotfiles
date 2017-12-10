@@ -58,7 +58,17 @@
     ],
     "window.zoomLevel": 1,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Ayu Dark",
+    "workbench.colorTheme": "Ayu Mirage",
     "material-icon-theme.showUpdateMessage": false,
     "vim.disableExtension": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
 }
