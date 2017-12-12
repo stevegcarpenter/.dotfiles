@@ -38,7 +38,7 @@ set confirm                 " ask to save when exiting unsaved files
 set noshowmode              " disable mode status since airline does this
 set splitright              " more natural splits
 set t_Co=256                " allow 256-color support
-set spell spelllang=en_us   " spellcheck
+" set spell spelllang=en_us   " spellcheck
 
 " undo files
 if isdirectory($HOME . '/.vim/undo') == 0
