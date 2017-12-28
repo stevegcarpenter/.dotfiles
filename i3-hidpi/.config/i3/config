@@ -196,7 +196,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- unmute #
 bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle # mute sound
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
-bindsym $mod+d exec rofi -show run
+bindsym $mod+space exec rofi -show run
 bindsym $mod+shift+x exec $locker
 bindsym $mod+shift+f exec thunar
 
