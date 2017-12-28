@@ -180,7 +180,7 @@ set $urgent-bg-color     #E53935
 set $arc-blue            #5294e2
 
 # program variables
-set $locker ~/.local/bin/lock.sh -l blur
+set $locker ~/.local/bin/lock.sh -l
 
 # window colors
 #                       border              background         text                 indicator
@@ -209,6 +209,6 @@ exec pulseaudio --start
 exec_always ~/.screenlayout/layout.sh
 exec_always nitrogen --restore
 exec_always ~/.config/polybar/polybar.sh &
-exec xautolock -time 1 -locker $locker
+exec xautolock -time 5 -locker "$locker"
 exec setxkbmap -option ctrl:nocaps
 exec .scripts/xflux.sh &
