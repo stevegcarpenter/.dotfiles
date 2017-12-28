@@ -42,7 +42,7 @@ set scrolloff=5             " scroll when cursor is 5 lines from top/bottom
 set confirm                 " ask to save when exiting unsaved files
 set noshowmode              " disable mode status since airline does this
 set splitright              " more natural splits
-set t_Co=256                " allow 256-color support
+set nowrap                  " disable wrapping
 " set spell spelllang=en_us   " spellcheck
 
 " undo files
