@@ -47,3 +47,17 @@ alias dl="cd ~/Downloads"
 alias c="cd ~/code"
 alias .="cd ~/.dotfiles"
 alias cf="cd ~/codefellows"
+
+# Git aliases
+alias ga='git add'
+alias gapa='git add --patch'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbd='git branch -d'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcb='git checkout -b'
+alias gcm='git checkout master'
+alias gm='git merge'
+alias gsta='git stash save'
+alias gstaa='git stash apply'
