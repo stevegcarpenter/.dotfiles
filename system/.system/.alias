@@ -51,6 +51,7 @@ alias cf="cd ~/codefellows"
 # Git aliases
 alias ga='git add'
 alias gapa='git add --patch'
+alias gapac='git add --patch && git commit -v'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gbd='git branch -d'
