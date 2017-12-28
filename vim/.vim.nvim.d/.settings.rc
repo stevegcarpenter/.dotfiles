@@ -44,6 +44,8 @@ set noshowmode              " disable mode status since airline does this
 set splitright              " more natural splits
 set nowrap                  " disable wrapping
 " set spell spelllang=en_us   " spellcheck
+set autoread                " reload files changed outside vim
+
 
 " undo files
 if isdirectory($HOME . '/.vim/undo') == 0
