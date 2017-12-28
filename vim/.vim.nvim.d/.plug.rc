@@ -19,7 +19,18 @@ Plug 'severin-lemaignan/vim-minimap'  " Minimap of the code
 Plug 'mattn/emmet-vim'                " Emmit HTML shortcuts
 Plug 'Valloric/MatchTagAlways'        " Highlight opening and closing tags
 Plug 'vim-scripts/loremipsum'         " Text generator
-Plug 'flazz/vim-colorschemes'         " Color schemes
 Plug 'trevordmiller/nova-vim'         " Nova color scheme
+Plug 'jelera/vim-javascript-syntax'   " More JS syntax support
+Plug 'sheerun/vim-polyglot'           " Multi-language syntax plugin
+Plug 'alvan/vim-closetag'             " Close html tags automagically
+Plug 'tpope/vim-commentary'           " Quick way to add/remove comments
+Plug 'noah/vim256-color'              " 256 Colorschemes
+Plug 'rafi/awesome-vim-colorschemes'  " Other Colorschemes
+Plug 'xolox/vim-misc'                 " Dependency of Colorscheme switcher
+Plug 'xolox/vim-colorscheme-switcher' " Colorscheme switcher
+Plug 'terryma/vim-multiple-cursors'   " Multiple cursors
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'npm install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
 
 call plug#end()
