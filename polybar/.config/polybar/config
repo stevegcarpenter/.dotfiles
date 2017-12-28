@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [colors]
 ; background     = #ff1d2021
-background     = #111111
+background     = #dd111111
 foreground     = #a0ebdbb2
 foreground-alt = #90665c54
 white          = #fbf1c7
