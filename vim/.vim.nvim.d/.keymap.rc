@@ -17,6 +17,9 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+" copy visually highlighted text to actual clipboard
+vnoremap <leader>y "+y
+
 " exit hlmode
 nnoremap <C-n> :nohl<CR>
 " open buffer list, allow selection
