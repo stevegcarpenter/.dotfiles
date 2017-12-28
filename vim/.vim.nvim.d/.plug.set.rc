@@ -18,7 +18,7 @@ nmap ga <Plug>(EasyAlign)
 let NERDTreeShowHidden=1
 
 " Select colorscheme
-colorscheme Chasing_Logic
+colorscheme PaperColor
 highlight ColorColumn ctermbg=Blue
 highlight ExtraWhitespace ctermbg=Blue
 match ExtraWhitespace /\s\+$/
