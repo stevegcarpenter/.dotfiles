@@ -17,6 +17,11 @@ augroup filetype_specific
 augroup END
 " }}}
 
+" ---- builtin plugins ----
+runtime macros/matchit.vim  " better matching (eg <h1> ... </h1>) using '%'
+au BufNewFile,BufRead COMMIT_EDITMSG set spell " only spell check git commit messages
+
+" primary settings
 set encoding=utf-8
 scriptencoding utf-8
 syntax on                   " enable syntax highlighting
