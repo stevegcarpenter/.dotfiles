@@ -21,7 +21,7 @@ nnoremap <leader>l :wincmd l<CR>
 vnoremap <leader>y "+y
 
 " exit hlmode
-nnoremap <C-n> :nohl<CR>
+nnoremap <leader>n :nohl<CR>
 " open buffer list, allow selection
 nnoremap <leader><leader>l :buffers<CR>:buffer<Space>
 " open previous file
