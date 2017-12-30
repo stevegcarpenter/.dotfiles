@@ -9,7 +9,6 @@ Plug 'phleet/vim-mercenary'           " Mercurial plugin
 Plug 'junegunn/vim-easy-align'        " Align columns
 Plug 'tpope/vim-fugitive'             " Git plugin
 Plug 'tpope/vim-surround'             " Assist in editing/adding surrounds
-Plug 'ervandew/supertab'              " Tab completion
 Plug 'python-mode/python-mode'        " Python code checking plugin
 Plug 'bling/vim-airline'              " Status bar mods
 Plug 'wesQ3/vim-windowswap'           " Yank/paste splits
@@ -29,6 +28,8 @@ Plug 'rafi/awesome-vim-colorschemes'  " Other Colorschemes
 Plug 'xolox/vim-misc'                 " Dependency of Colorscheme switcher
 Plug 'xolox/vim-colorscheme-switcher' " Colorscheme switcher
 Plug 'terryma/vim-multiple-cursors'   " Multiple cursors
+Plug 'SirVer/ultisnips'               " (N)vim snippet engine
+Plug 'honza/vim-snippets'             " Additional snippets
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
