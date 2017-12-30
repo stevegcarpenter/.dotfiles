@@ -1,9 +1,4 @@
-""""""" SuperTab configuration """""""
-let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-function! Completefunc(findstart, base)
-    return "\<c-x>\<c-p>"
-endfunction
-
+" --------------------- functions ---------------------
 " Visual search on highlighted strings
 function! s:VSetSearch()
     let temp = @s
