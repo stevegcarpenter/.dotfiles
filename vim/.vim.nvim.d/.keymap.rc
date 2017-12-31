@@ -47,7 +47,3 @@ nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
 
 "------- prettier -------
 nmap <Leader>py <Plug>(Prettier)
-
-"------- snippets -------
-" html skeleton
-nnoremap <leader>,html :-1read $HOME/.vim/snippets/.skeleton.html<CR>3jf>a
