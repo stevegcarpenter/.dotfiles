@@ -32,6 +32,9 @@ alias emacs="emacs -nw"
 # Use Vim, not Vi, (backslash prevents recursive alias)
 alias vi="\vim"
 
+# Ranger alias
+alias ra="ranger"
+
 # copy/paste helpers
 alias pbcopy="xclip -selection clipboard"
 alias pbpaste="xclip -selection clipboard -o"
