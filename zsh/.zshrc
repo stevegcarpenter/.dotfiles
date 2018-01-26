@@ -97,8 +97,6 @@ export npm_config_prefix=$HOME/.node_modules
 
 export PATH
 
-(neofetch &)
-
 # set TERM appropriately based on whether TMUX is active
 if [[ -n  "$TMUX" ]]; then
   export TERM=screen-256color
