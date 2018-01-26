@@ -8,12 +8,12 @@ setlocal ts=4 sw=4 expandtab  " default file settings
 augroup filetype_specific
     autocmd!
     autocmd Filetype ruby       setlocal ts=2 sw=2 expandtab
-    autocmd Filetype javascript setlocal ts=2 sw=2 cc=78,120,160 expandtab
-    autocmd Filetype html       setlocal ts=2 sw=2 cc=78,120,160 expandtab
-    autocmd Filetype css        setlocal ts=2 sw=2 cc=78,120,160 expandtab
-    autocmd Filetype c          setlocal ts=4 sw=4 tw=78 cc=78 expandtab
-    autocmd Filetype cpp        setlocal ts=4 sw=4 tw=78 cc=78 expandtab
-    autocmd Filetype markdown   setlocal ts=2 sw=4 tw=78 cc=78,120,160 expandtab
+    autocmd Filetype javascript setlocal ts=2 sw=2 cc=79,120,160 expandtab
+    autocmd Filetype html       setlocal ts=2 sw=2 cc=79,120,160 expandtab
+    autocmd Filetype css        setlocal ts=2 sw=2 cc=79,120,160 expandtab
+    autocmd Filetype c          setlocal ts=4 sw=4 tw=79 cc=78 expandtab
+    autocmd Filetype cpp        setlocal ts=4 sw=4 tw=79 cc=78 expandtab
+    autocmd Filetype markdown   setlocal ts=2 sw=4 tw=79 cc=78,120,160 expandtab
 augroup END
 " }}}
 
@@ -35,7 +35,7 @@ set ignorecase
 set smartcase
 set autoindent
 set list
-set listchars=tab:¶_,extends:>,precedes:<
+set listchars=tab:¶_,extends:>,precedes:<,trail:·
 set ruler                   " display cursor position in status line
 set laststatus=2            " always display status line
 set scrolloff=5             " scroll when cursor is 5 lines from top/bottom

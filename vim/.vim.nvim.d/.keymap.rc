@@ -6,6 +6,8 @@ let mapleader="\ "
 " easier way to exit insert mode
 inoremap JJ <esc>
 inoremap jj <esc>
+inoremap KK <esc>
+inoremap kk <esc>
 
 " split window fast
 nnoremap <leader>\| :vsplit<CR>
@@ -44,6 +46,10 @@ let g:windowswap_map_key = 0 "prevent default bindings
 nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>ww :call WindowSwap#EasyWindowSwap()<CR>
+
+" buffer hotkeys
+nnoremap <C-j> :bnext<CR>
+nnoremap <C-k> :bprev<CR>
 
 "------- prettier -------
 nmap <Leader>py <Plug>(Prettier)

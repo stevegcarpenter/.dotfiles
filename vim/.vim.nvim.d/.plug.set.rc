@@ -31,3 +31,14 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" Airline configuration {{{
+let g:airline_detect_paste=1
+let g:airline_theme='deus'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#show_splits = 1 "enable/disable displaying open splits per tab (only when tabs are opened). >
+let g:airline#extensions#tabline#show_buffers = 1 " enable/disable displaying buffers with a single tab
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
+let g:airline_powerline_fonts = 1
+"}}}

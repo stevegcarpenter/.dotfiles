@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive'             " Git plugin
 Plug 'tpope/vim-surround'             " Assist in editing/adding surrounds
 Plug 'python-mode/python-mode'        " Python code checking plugin
 Plug 'bling/vim-airline'              " Status bar mods
+Plug 'vim-airline/vim-airline-themes' " Airline themes
 Plug 'wesQ3/vim-windowswap'           " Yank/paste splits
 Plug 'fisadev/vim-isort'              " Python import sorting
 Plug 'scrooloose/nerdtree'            " Nerdtree file browser
@@ -31,6 +32,7 @@ Plug 'terryma/vim-multiple-cursors'   " Multiple cursors
 Plug 'SirVer/ultisnips'               " (N)vim snippet engine
 Plug 'honza/vim-snippets'             " Additional snippets
 Plug 'jiangmiao/auto-pairs'           " Smart auto pairing
+Plug 'vim-scripts/VisIncr'            " Visually increment visual blocks
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
