@@ -42,6 +42,9 @@ alias pbpaste="xclip -selection clipboard -o"
 # pacman shortcut
 alias pac="sudo pacman"
 
+# npm run shortcut
+alias n="npm run"
+
 # Use NVIM, not VIM
 alias vim="nvim"
 
