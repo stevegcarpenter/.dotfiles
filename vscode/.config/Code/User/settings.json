@@ -3,10 +3,12 @@
     "editor.tabSize": 2,
     "editor.cursorStyle": "line",
     "editor.cursorBlinking": "solid",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "[python]": {
         "editor.tabSize": 4
     },
-    "cSpell.language": "en",
     "editor.rulers": [ 78, 120, 160 ],
     "editor.lineNumbers": "relative",
     "editor.fontSize": 12,
@@ -38,7 +40,7 @@
             ]
         },
         {
-            "before": ["leader", "w"],
+            "before": ["leader", "f", "s"],
             "after": [],
             "commands": [
                 {
@@ -60,7 +62,7 @@
     ],
     "window.zoomLevel": 0,
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Monokai Dimmed",
     "material-icon-theme.showUpdateMessage": false,
     "vim.disableExtension": false,
     "gitlens.advanced.messages": {
@@ -73,4 +75,5 @@
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
+    "workbench.startupEditor": "newUntitledFile",
 }
