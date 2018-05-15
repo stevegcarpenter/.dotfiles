@@ -33,6 +33,7 @@ Plug 'SirVer/ultisnips'               " (N)vim snippet engine
 Plug 'honza/vim-snippets'             " Additional snippets
 Plug 'jiangmiao/auto-pairs'           " Smart auto pairing
 Plug 'vim-scripts/VisIncr'            " Visually increment visual blocks
+Plug 'powerline/powerline'            " Powerline fonts for (n)vim
 Plug 'prettier/vim-prettier', {
   \ 'do': 'npm install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
