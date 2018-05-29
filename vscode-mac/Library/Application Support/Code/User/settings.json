@@ -1,40 +1,47 @@
 {
-    "telemetry.enableTelemetry": false,
+    "vim.easymotion": true,
     "prettier.eslintIntegration": true,
-    "editor.cursorStyle": "line",
-    "editor.cursorBlinking": "solid",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "editor.rulers": [ 78, 120, 160 ],
     "editor.lineNumbers": "relative",
-    "editor.fontSize": 12,
-    "scrolloff.scrolloff": 5,
-    "vim.history": 50,
-    "vim.easymotion": true,
-    "vim.leader": "<space>",
+    "editor.renderWhitespace": "all",
+    "vim.sneak": true,
     "vim.incsearch": true,
-    "vim.hlsearch": true,
     "vim.visualstar": true,
-    "vim.showcmd": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
     "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.neovimPath": "/usr/local/bin/nvim",
     "vim.insertModeKeyBindings": [
         {
-            "before": ["j", "j"],
+            "before": ["j","j"],
             "after": ["<Esc>"]
         }
     ],
     "vim.otherModesKeyBindingsNonRecursive": [
         {
+            "before": ["<leader>","d"],
+            "after": ["d", "d"]
+        },
+        {
             "before":["<C-n>"],
             "after":[],
             "commands": [
                 {
-                    "command": ":nohl",
-                    "args": []
+                    "command": ":nohl"
                 }
             ]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": ["<C-w>", "l"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "after": ["<C-w>", "h"]
         },
         {
             "before": ["leader", "w"],
@@ -45,33 +52,20 @@
                     "args": []
                 }
             ]
-        },
-        {
-            "before": ["leader", "q"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
         }
     ],
+    "vim.leader": "<space>",
+    "vim.handleKeys":{
+        "<C-a>": false,
+        "<C-f>": false
+    },
     "window.zoomLevel": 0,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Mariana Nord",
-    "material-icon-theme.showUpdateMessage": false,
     "vim.disableExtension": false,
-    "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressUpdateNotice": false,
-        "suppressWelcomeNotice": true
-    },
-    "workbench.startupEditor": "newUntitledFile",
     "explorer.confirmDelete": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.historyExplorer.enabled": true,
 }
