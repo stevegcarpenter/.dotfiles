@@ -1,71 +1,132 @@
 {
-    "vim.easymotion": true,
-    "prettier.eslintIntegration": true,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "editor.rulers": [ 78, 120, 160 ],
-    "editor.lineNumbers": "relative",
-    "editor.renderWhitespace": "all",
-    "vim.sneak": true,
-    "vim.incsearch": true,
-    "vim.visualstar": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.enableNeovim": true,
-    "vim.neovimPath": "/usr/local/bin/nvim",
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j","j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before": ["<leader>","d"],
-            "after": ["d", "d"]
-        },
-        {
-            "before":["<C-n>"],
-            "after":[],
-            "commands": [
-                {
-                    "command": ":nohl"
-                }
-            ]
-        },
-        {
-            "before": ["<leader>", "l"],
-            "after": ["<C-w>", "l"]
-        },
-        {
-            "before": ["<leader>", "h"],
-            "after": ["<C-w>", "h"]
-        },
-        {
-            "before": ["leader", "w"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys":{
-        "<C-a>": false,
-        "<C-f>": false
+  "vim.easymotion": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.rulers": [
+    78,
+    120
+  ],
+  "editor.renderWhitespace": "all",
+  "vim.visualstar": true,
+  "vim.hlsearch": true,
+  "vim.enableNeovim": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "window.zoomLevel": 0,
+  "vim.disableExtension": false,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.insert": "#039bed",
+  "vim.statusBarColors.normal": "#77c577",
+  "vim.statusBarColors.replace": "#ee5276",
+  "vim.statusBarColors.visual": "#c352c3",
+  "vim.statusBarColors.visualblock": "#c352c3",
+  "vim.statusBarColors.visualline": "#c352c3",
+  "explorer.confirmDelete": false,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "materialTheme.fixIconsRunning": false,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "<C-w>",
+        "h"
+      ]
     },
-    "window.zoomLevel": 0,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Mariana Nord",
-    "vim.disableExtension": false,
-    "explorer.confirmDelete": false,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "after": [
+        "<C-w>",
+        "j"
+      ]
     },
-    "gitlens.historyExplorer.enabled": true,
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "after": [
+        "<C-w>",
+        "k"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "<C-w>",
+        "l"
+      ]
+    },
+    {
+      "before": [
+        "leader",
+        "w"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.files.save",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "tslint.autoFixOnSave": true,
+  "tslint.alwaysShowStatus": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#77c577",
+    "statusBar.noFolderBackground": "#77c577",
+    "statusBar.debuggingBackground": "#77c577"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "scrolloff.scrolloff": 2,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "[json]": {},
+  "go.inferGopath": true,
+  "go.gotoSymbol.includeGoroot": true,
+  "go.gotoSymbol.includeImports": true,
+  "go.editorContextMenuCommands": {
+      "toggleTestFile": false,
+      "addTags": false,
+      "removeTags": false,
+      "testAtCursor": false,
+      "testFile": false,
+      "testPackage": false,
+      "generateTestForFunction": false,
+      "generateTestForFile": false,
+      "generateTestForPackage": false,
+      "testCoverage": false,
+      "playground": false,
+      "fillStruct": true
+  },
+  "go.autocompleteUnimportedPackages": true,
+  "editor.lineNumbers": "relative",
+  "html.format.endWithNewline": true,
+  "javascript.preferences.quoteStyle": "single",
+  "terminal.integrated.rendererType": "dom",
 }
