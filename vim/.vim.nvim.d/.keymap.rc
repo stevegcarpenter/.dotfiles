@@ -13,7 +13,8 @@ inoremap kk <esc>
 nnoremap <leader>\| :vsplit<CR>
 nnoremap <leader>- :split<CR>
 nnoremap <leader>q :quit<CR>
-nnoremap <leader>o :edit<Space>
+nnoremap <leader>o :Files <CR>
+nnoremap <leader>e :e<Space>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -26,14 +27,14 @@ vnoremap <leader>y "+y
 nnoremap <leader>n :nohl<CR>
 " open buffer list, allow selection
 nnoremap <leader><leader>l :buffers<CR>:buffer<Space>
-" open previous file
-nnoremap <leader>b :e#<CR>
+" buffer delete
+nnoremap <leader>bd :bd<CR>
 
 " start Nerdtree
 nnoremap <leader>O :NERDTree<CR>
 
 " start ag search
-nnoremap <leader>/ :Ag<Space>
+nnoremap <leader>/ :Rg<Space>
 
 " set/clear paste mode
 nnoremap <leader>p :set paste<CR>

@@ -14,13 +14,11 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" Enable showing hidden files
-let NERDTreeShowHidden=1
-
 " Select colorscheme
-colorscheme PaperColor
-highlight ColorColumn ctermbg=Blue
-highlight ExtraWhitespace ctermbg=Blue
+colorscheme deus
+highlight ColorColumn ctermbg=DarkGrey
+highlight Cursor guifg=NONE guibg=DarkRed
+highlight ExtraWhitespace ctermbg=DarkRed
 match ExtraWhitespace /\s\+$/
 
 " ultisnip configuration
@@ -33,12 +31,30 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Airline configuration {{{
-let g:airline_detect_paste=1
-let g:airline_theme='deus'
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#show_splits = 1 "enable/disable displaying open splits per tab (only when tabs are opened). >
-let g:airline#extensions#tabline#show_buffers = 1 " enable/disable displaying buffers with a single tab
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
-let g:airline_powerline_fonts = 1
+    let g:airline_detect_paste=1
+    let g:airline_theme='deep_space'
+    let g:airline#extensions#tabline#enabled=1
+    let g:airline#extensions#tabline#show_splits = 1 "enable/disable displaying open splits per tab (only when tabs are opened). >
+    let g:airline#extensions#tabline#show_buffers = 1 " enable/disable displaying buffers with a single tab
+    let g:airline#extensions#tabline#formatter = 'unique_tail'
+    let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
+    let g:airline_powerline_fonts = 1
 "}}}
+
+" Golang settings {{{
+" Highlighting
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+
+" Auto import packages
+let g:go_fmt_command = "goimports"
+
+" Show type info about variable under cursor
+let g:go_auto_type_info = 1
+" }}}

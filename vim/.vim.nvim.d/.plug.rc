@@ -3,37 +3,56 @@
 " - For Vim:    ~/.vim/plugged
 call plug#begin(g:pluginpath)
 
-Plug 'rking/ag.vim'                   " ag search
-Plug 'Chiel92/vim-autoformat'         " Auto-format code
-Plug 'phleet/vim-mercenary'           " Mercurial plugin
-Plug 'junegunn/vim-easy-align'        " Align columns
-Plug 'tpope/vim-fugitive'             " Git plugin
-Plug 'tpope/vim-surround'             " Assist in editing/adding surrounds
-Plug 'python-mode/python-mode'        " Python code checking plugin
-Plug 'bling/vim-airline'              " Status bar mods
-Plug 'vim-airline/vim-airline-themes' " Airline themes
-Plug 'wesQ3/vim-windowswap'           " Yank/paste splits
-Plug 'fisadev/vim-isort'              " Python import sorting
-Plug 'scrooloose/nerdtree'            " Nerdtree file browser
-Plug 'severin-lemaignan/vim-minimap'  " Minimap of the code
-Plug 'mattn/emmet-vim'                " Emmit HTML shortcuts
-Plug 'Valloric/MatchTagAlways'        " Highlight opening and closing tags
-Plug 'vim-scripts/loremipsum'         " Text generator
-Plug 'trevordmiller/nova-vim'         " Nova color scheme
-Plug 'jelera/vim-javascript-syntax'   " More JS syntax support
-Plug 'sheerun/vim-polyglot'           " Multi-language syntax plugin
-Plug 'alvan/vim-closetag'             " Close html tags automagically
-Plug 'tpope/vim-commentary'           " Quick way to add/remove comments
-Plug 'noah/vim256-color'              " 256 Colorschemes
-Plug 'rafi/awesome-vim-colorschemes'  " Other Colorschemes
-Plug 'xolox/vim-misc'                 " Dependency of Colorscheme switcher
-Plug 'xolox/vim-colorscheme-switcher' " Colorscheme switcher
-Plug 'terryma/vim-multiple-cursors'   " Multiple cursors
-Plug 'jiangmiao/auto-pairs'           " Smart auto pairing
-Plug 'vim-scripts/VisIncr'            " Visually increment visual blocks
-Plug 'powerline/powerline'            " Powerline fonts for (n)vim
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'npm install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown'] }
+Plug '/usr/local/opt/fzf'              " System wide fzf binary
+Plug 'Chiel92/vim-autoformat'          " Auto-format code
+Plug 'Quramy/tsuquyomi'                " Typescript syntax checking
+Plug 'Valloric/MatchTagAlways'         " Highlight opening and closing tags
+Plug 'alvan/vim-closetag'              " Close html tags automagically
+Plug 'editorconfig/editorconfig-vim'   " Editor config
+Plug 'fisadev/vim-isort'               " Python import sorting
+Plug 'jelera/vim-javascript-syntax'    " More JS syntax support
+Plug 'jiangmiao/auto-pairs'            " Smart auto pairing
+Plug 'junegunn/fzf.vim'                " fzf fuzzy file search plugin
+Plug 'junegunn/vim-easy-align'         " Align columns
+Plug 'leafgarland/typescript-vim'      " TypeScript
+Plug 'mattn/emmet-vim'                 " Emmit HTML shortcuts
+Plug 'noah/vim256-color'               " 256 Colorschemes
+Plug 'phleet/vim-mercenary'            " Mercurial plugin
+Plug 'powerline/powerline'             " Powerline fonts for (n)vim
+Plug 'python-mode/python-mode'         " Python code checking plugin
+Plug 'rafi/awesome-vim-colorschemes'   " Other Colorschemes
+Plug 'severin-lemaignan/vim-minimap'   " Minimap of the code
+Plug 'terryma/vim-multiple-cursors'    " Multiple cursors
+Plug 'tpope/vim-commentary'            " Quick way to add/remove comments
+Plug 'tpope/vim-fugitive'              " Git plugin
+Plug 'tpope/vim-surround'              " Assist in editing/adding surrounds
+Plug 'trevordmiller/nova-vim'          " Nova color scheme
+Plug 'vim-airline/vim-airline-themes'  " Airline themes
+Plug 'bling/vim-airline'               " Status bar mods
+Plug 'vim-scripts/VisIncr'             " Visually increment visual blocks
+Plug 'vim-scripts/loremipsum'          " Text generator
+Plug 'wesQ3/vim-windowswap'            " Yank/paste splits
+Plug 'xolox/vim-colorscheme-switcher'  " Colorscheme switcher
+Plug 'xolox/vim-misc'                  " Dependency of Colorscheme switcher
+Plug 'jremmen/vim-ripgrep'             " ripgrep
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'} " Latest completion typescript release
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " golang tools
+" Plug 'Shougo/vimproc.vim', {
+"     \ 'build' : {
+"     \     'windows' : 'tools\\update-dll-mingw',
+"     \     'cygwin' : 'make -f make_cygwin.mak',
+"     \     'mac' : 'make -f make_mac.mak',
+"     \     'linux' : 'make',
+"     \     'unix' : 'gmake',
+"     \    },
+"     \ }
+" Plug 'Valloric/YouCompleteMe', {
+"      \ 'build' : {
+"      \     'mac' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"      \     'unix' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"      \     'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"      \     'cygwin' : './install.sh --clang-completer --system-libclang --omnisharp-completer'
+"      \    }
+"      \ }
 
 call plug#end()
