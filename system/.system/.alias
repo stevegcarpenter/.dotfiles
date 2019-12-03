@@ -26,9 +26,6 @@ alias l="ls -lF ${colorflag}"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 
-# Prefer no-window version
-alias emacs="emacs -nw"
-
 # Use Vim, not Vi, (backslash prevents recursive alias)
 alias vi="\vim"
 
