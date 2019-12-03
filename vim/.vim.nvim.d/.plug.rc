@@ -6,10 +6,8 @@ call plug#begin(g:pluginpath)
 Plug '/usr/local/opt/fzf'              " System wide fzf binary
 Plug 'Chiel92/vim-autoformat'          " Auto-format code
 Plug 'Quramy/tsuquyomi'                " Typescript syntax checking
-Plug 'Valloric/MatchTagAlways'         " Highlight opening and closing tags
 Plug 'alvan/vim-closetag'              " Close html tags automagically
 Plug 'editorconfig/editorconfig-vim'   " Editor config
-Plug 'fisadev/vim-isort'               " Python import sorting
 Plug 'jelera/vim-javascript-syntax'    " More JS syntax support
 Plug 'jiangmiao/auto-pairs'            " Smart auto pairing
 Plug 'junegunn/fzf.vim'                " fzf fuzzy file search plugin
