@@ -1,11 +1,14 @@
 # All relevant aliases for Linux
 
 # This option only exists in Linux. Don't run it on mac.
-if ls --color > /dev/null 2>&1; then # GNU `ls`
-    colorflag="--color"
-else # macOS `ls`
-    colorflag="-G"
-fi
+# if ls --color > /dev/null 2>&1; then # GNU `ls`
+colorflag="--color"
+# else # macOS `ls`
+#     colorflag="-G"
+# fi
+
+# setup GNU ls as default (Note: coreutils must be installed)
+alias ls="/usr/local/opt/coreutils/libexec/gnubin/ls ${colorflag}"
 
 # Display directories
 alias ld="ls ${colorflag} -d */"
