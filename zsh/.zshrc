@@ -33,7 +33,7 @@ if ! zplug check --verbose; then
 fi
 
 # Then, source plugins and add commands to $PATH
-zplug load --verbose
+zplug load
 
 ##############################################################################
 
@@ -56,10 +56,8 @@ done
 PATH=$HOME/.node_modules/bin:$PATH
 export npm_config_prefix=$HOME/.node_modules
 
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
-PATH=$PATH:$GOPATH/bin
-PATH=$PATH:$GOROOT/bin
+# access doom commands
+PATH=$PATH:$HOME/.emacs.d/bin
 
 export PATH
 
@@ -81,7 +79,10 @@ bindkey '^[[B' history-beginning-search-forward
 [ -f /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
 
 # setup ssh agent
-ssh-add &>/dev/null || eval `ssh-agent` &>/dev/null     # start ssh-agent if not present
-[ $? -eq 0 ] && {                                       # ssh-agent has started
-  ssh-add ~/.ssh/id_rsa &>/dev/null                     # github key
-}
+# ssh-add &>/dev/null || eval `ssh-agent` &>/dev/null     # start ssh-agent if not present
+# [ $? -eq 0 ] && {                                       # ssh-agent has started
+#   ssh-add ~/.ssh/id_rsa &>/dev/null                     # github key
+# }
+
+source $HOME/.asdf/asdf.sh
+source $HOME/.asdf/completions/asdf.bash
