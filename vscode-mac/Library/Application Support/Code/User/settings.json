@@ -1,5 +1,4 @@
 {
-  "vim.easymotion": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
@@ -22,10 +21,6 @@
   "vim.statusBarColors.visualblock": "#c352c3",
   "vim.statusBarColors.visualline": "#c352c3",
   "explorer.confirmDelete": false,
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
-  "gitlens.historyExplorer.enabled": true,
   "workbench.iconTheme": "eq-material-theme-icons-darker",
   "materialTheme.fixIconsRunning": false,
   "vim.insertModeKeyBindings": [
@@ -95,8 +90,6 @@
     }
   ],
   "vim.leader": "<space>",
-  "tslint.autoFixOnSave": true,
-  "tslint.alwaysShowStatus": true,
   "workbench.colorCustomizations": {
     "statusBar.background": "#77c577",
     "statusBar.noFolderBackground": "#77c577",
@@ -111,22 +104,22 @@
   "go.gotoSymbol.includeGoroot": true,
   "go.gotoSymbol.includeImports": true,
   "go.editorContextMenuCommands": {
-      "toggleTestFile": false,
-      "addTags": false,
-      "removeTags": false,
-      "testAtCursor": false,
-      "testFile": false,
-      "testPackage": false,
-      "generateTestForFunction": false,
-      "generateTestForFile": false,
-      "generateTestForPackage": false,
-      "testCoverage": false,
-      "playground": false,
-      "fillStruct": true
+    "toggleTestFile": false,
+    "addTags": false,
+    "removeTags": false,
+    "testAtCursor": false,
+    "testFile": false,
+    "testPackage": false,
+    "generateTestForFunction": false,
+    "generateTestForFile": false,
+    "generateTestForPackage": false,
+    "testCoverage": false,
+    "playground": false,
+    "fillStruct": true
   },
   "go.autocompleteUnimportedPackages": true,
   "editor.lineNumbers": "relative",
   "html.format.endWithNewline": true,
   "javascript.preferences.quoteStyle": "single",
-  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.rendererType": "dom"
 }
