@@ -1,0 +1,29 @@
+#!/bin/sh
+
+export OUTREACH_PROJECT_ROOT="$HOME/projects"
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+
+# NOTE: No longer valid
+# source the fullstack setup for helpful aliases
+# source $OUTREACH_PROJECT_ROOT/dev-environment/actions/fullstack/setup
+
+# Add the dev-environment to our kube config
+export KUBECONFIG="$HOME/.kube/config:$HOME/.outreach/kubeconfig.yaml"
+# vault stuff
+export VAULT_ADDR=https://vault.outreach.cloud
+
+# setup ssh agent
+ssh-add &>/dev/null || eval `ssh-agent` &>/dev/null     # start ssh-agent if not present
+[ $? -eq 0 ] && {                                       # ssh-agent has started
+  ssh-add ~/.ssh/github_id_rsa &>/dev/null              # github key
+  ssh-add ~/.ssh/outreach_id_rsa &>/dev/null            # outreach key
+}
+
+# outreach only aliases
+# alias outreach_migrate='pushd $OUTREACH_PROJECT_ROOT/outreach/server &> /dev/null && bin/rails db:migrate RAILS_ENV=development; popd &> /dev/null'
+# alias outreach_fclient='pushd $OUTREACH_PROJECT_ROOT/outreach/client &> /dev/null && yarn full-start; popd &> /dev/null'
+alias outreach_client='pushd $OUTREACH_PROJECT_ROOT/outreach/client &> /dev/null && OUTREACH_SOURCEMAP=true yarn start; popd &> /dev/null'
+
+
+# update path to get gcloud executable
+export PATH=~/google-cloud-sdk/bin:$PATH

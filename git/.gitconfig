@@ -1,6 +1,6 @@
 [user]
-    name = Steven Carpenter
-    email = stevegcarpenter@gmail.com
+	name = Steven Carpenter
+	email = stevegcarpenter@gmail.com
 
 [color]
     ui = auto
@@ -9,7 +9,7 @@
     vimdiff
 
 [credential]
-    helper = cache --timeout=3600
+	helper = osxkeychain
 
 [alias]
     # one-line log
@@ -37,3 +37,5 @@
     la = "!git config -l | grep alias | cut -c 7-"
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[url "git@github.com:getoutreach"]
+	insteadOf = https://github.com/getoutreach

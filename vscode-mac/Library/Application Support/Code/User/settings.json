@@ -1,17 +1,22 @@
 {
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "editor.rulers": [
-    78,
-    120
-  ],
+  "editor.rulers": [78, 120],
   "editor.renderWhitespace": "all",
   "vim.visualstar": true,
   "vim.hlsearch": true,
   "vim.enableNeovim": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
-  "window.zoomLevel": 0,
   "vim.disableExtension": false,
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.insert": "#039bed",
@@ -21,65 +26,36 @@
   "vim.statusBarColors.visualblock": "#c352c3",
   "vim.statusBarColors.visualline": "#c352c3",
   "explorer.confirmDelete": false,
-  "workbench.iconTheme": "eq-material-theme-icons-darker",
   "materialTheme.fixIconsRunning": false,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "j"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<C-c>"],
+      "after": ["<Esc>"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": [
-        "<leader>",
-        "h"
-      ],
-      "after": [
-        "<C-w>",
-        "h"
-      ]
+      "before": ["<leader>", "h"],
+      "after": ["<C-w>", "h"]
     },
     {
-      "before": [
-        "<leader>",
-        "j"
-      ],
-      "after": [
-        "<C-w>",
-        "j"
-      ]
+      "before": ["<leader>", "j"],
+      "after": ["<C-w>", "j"]
     },
     {
-      "before": [
-        "<leader>",
-        "k"
-      ],
-      "after": [
-        "<C-w>",
-        "k"
-      ]
+      "before": ["<leader>", "k"],
+      "after": ["<C-w>", "k"]
     },
     {
-      "before": [
-        "<leader>",
-        "l"
-      ],
-      "after": [
-        "<C-w>",
-        "l"
-      ]
+      "before": ["<leader>", "l"],
+      "after": ["<C-w>", "l"]
     },
     {
-      "before": [
-        "leader",
-        "w"
-      ],
+      "before": ["leader", "w"],
       "after": [],
       "commands": [
         {
@@ -96,7 +72,6 @@
     "statusBar.debuggingBackground": "#77c577"
   },
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "workbench.colorTheme": "Material Theme Darker High Contrast",
   "scrolloff.scrolloff": 2,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "[json]": {},
@@ -118,8 +93,48 @@
     "fillStruct": true
   },
   "go.autocompleteUnimportedPackages": true,
-  "editor.lineNumbers": "relative",
   "html.format.endWithNewline": true,
   "javascript.preferences.quoteStyle": "single",
-  "terminal.integrated.rendererType": "dom"
+  "terminal.integrated.rendererType": "dom",
+  "todo-tree.highlights.enabled": true,
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "todo-tree.tree.showScanModeButton": false,
+  "debug.node.autoAttach": "on",
+  "turboConsoleLog.delimiterInsideMessage": "-",
+  "turboConsoleLog.quote": "'",
+  "turboConsoleLog.includeFileNameAndLineNum": false,
+  "workbench.sideBar.location": "right",
+  "editor.cursorStyle": "line",
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Noctis Minimus",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "window.zoomLevel": 1,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

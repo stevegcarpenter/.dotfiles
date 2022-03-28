@@ -25,12 +25,15 @@ alias ll="ls -lh ${colorflag}"
 # List all files in colorized long format
 alias l="ls -lF ${colorflag}"
 
+# List all package.json scripts in fzf searchable format
+alias lscripts="ls-scripts | fzf"
+
 # Grep with color
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 
 # Use Vim, not Vi, (backslash prevents recursive alias)
-alias vi="\vim"
+alias vi="nvim"
 
 # Ranger alias
 alias ra="ranger"
