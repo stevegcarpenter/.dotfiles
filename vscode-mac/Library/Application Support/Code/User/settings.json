@@ -16,7 +16,7 @@
   "vim.visualstar": true,
   "vim.hlsearch": true,
   "vim.enableNeovim": true,
-  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.neovimPath": "/opt/homebrew/bin/nvim",
   "vim.disableExtension": false,
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.insert": "#039bed",

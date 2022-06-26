@@ -1,7 +1,8 @@
+eval $(/opt/homebrew/bin/brew shellenv)
 # zsh plug section
 ##############################################################################
 # packages
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
 
 # Supports oh-my-zsh plugins and the like
@@ -15,9 +16,9 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-completions"
 zplug "zigius/expand-ealias.plugin.zsh"
-zplug "paulmelnikow/zsh-startup-timer"
+# zplug "paulmelnikow/zsh-startup-timer"
 zplug "tysonwolker/iterm-tab-colors"
-zplug "desyncr/auto-ls"
+# zplug "desyncr/auto-ls"
 zplug "momo-lab/zsh-abbrev-alias"
 zplug "arzzen/calc.plugin.zsh"
 zplug "peterhurford/up.zsh"
@@ -55,6 +56,9 @@ PATH=$HOME/node_modules/.bin:$PATH
 # access doom commands
 PATH=$PATH:$HOME/.emacs.d/bin
 
+# use coreutils binaries (eg ls) by default
+PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
 export PATH
 
 # set TERM appropriately based on whether TMUX is active
@@ -65,12 +69,12 @@ else
 fi
 
 # fzf fuzzy finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# export FZF_DEFAULT_COMMAND='fd --type f'
+# export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-bindkey '^[[A' history-beginning-search-backward
-bindkey '^[[B' history-beginning-search-forward
+# bindkey '^[[A' history-beginning-search-backward
+# bindkey '^[[B' history-beginning-search-forward
 
 [ -f /usr/local/etc/profile.d/z.sh ] && source /usr/local/etc/profile.d/z.sh
 
@@ -85,6 +89,7 @@ for f in ~/.system/.*; do
   fi
 done
 
+export PATH="/Users/stevecarpenter/.local/share/solana/install/active_release/bin:$PATH"
 export KUBECONFIG="$HOME/.kube/config:$HOME/.outreach/kubeconfig.yaml"
 export NODE_EXTRA_CA_CERTS="$HOME/.local/dev-environment/.outreach-ca/tls.crt"
 ###start-marker|{"name":"orcsource","description":"Allows Outreach specific shell hooks"}
