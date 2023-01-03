@@ -1,6 +1,6 @@
 [user]
-	name = Steven Carpenter
-	email = stevegcarpenter@gmail.com
+    name = Steven Carpenter
+    email = stevegcarpenter@gmail.com
 
 [color]
     ui = auto
@@ -9,7 +9,7 @@
     vimdiff
 
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 
 [alias]
     # one-line log

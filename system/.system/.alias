@@ -7,9 +7,6 @@ colorflag="--color"
 #     colorflag="-G"
 # fi
 
-# setup GNU ls as default (Note: coreutils must be installed)
-alias ls="/usr/local/opt/coreutils/libexec/gnubin/ls ${colorflag}"
-
 # Display directories
 alias ld="ls ${colorflag} -d */"
 
@@ -45,20 +42,8 @@ alias ra="ranger"
 #    alias pbpaste="xclip -selection clipboard -o"
 # fi
 
-# pacman shortcut
-alias pac="sudo pacman"
-
-# npm run shortcut
-alias n="npm run"
-
 # Use NVIM, not VIM
 alias vim="nvim"
-
-# Shortcuts
-alias dl="cd ~/Downloads"
-alias c="cd ~/code"
-alias .="cd ~/.dotfiles"
-alias cf="cd ~/codefellows"
 
 # Git aliases
 alias ga='git add'
