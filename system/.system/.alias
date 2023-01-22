@@ -7,6 +7,9 @@ colorflag="--color"
 #     colorflag="-G"
 # fi
 
+# Helpful command to find files in tmux
+alias v="fd --type f --hidden --exclude .git --print0 | fzf-tmux -p --read0 --print0 --exit-0 --reverse | xargs -r -0 nvim"
+
 # Display directories
 alias ld="ls ${colorflag} -d */"
 
