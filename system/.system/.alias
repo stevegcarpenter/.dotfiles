@@ -1,11 +1,5 @@
-# All relevant aliases for Linux
-
-# This option only exists in Linux. Don't run it on mac.
-# if ls --color > /dev/null 2>&1; then # GNU `ls`
+# All relevant aliases
 colorflag="--color"
-# else # macOS `ls`
-#     colorflag="-G"
-# fi
 
 # Helpful command to find files in tmux
 alias v="fd --type f --hidden --exclude .git --print0 | fzf-tmux -p --read0 --print0 --exit-0 --reverse | xargs -r -0 nvim"
@@ -25,8 +19,8 @@ alias ll="ls -lh ${colorflag}"
 # List all files in colorized long format
 alias l="ls -lF ${colorflag}"
 
-# List all package.json scripts in fzf searchable format
-alias lscripts="ls-scripts | fzf"
+# List all package.json scripts
+alias lsc="cat package.json | jq .scripts"
 
 # Grep with color
 alias grep="grep --color=auto"
@@ -37,13 +31,6 @@ alias vi="nvim"
 
 # Ranger alias
 alias ra="ranger"
-
-# copy/paste helpers
-# if [ "$(uname -s)" == "Linux" ]; then
-#    # On Linux, pbcopy doesn't exist so map it to xclip
-#    alias pbcopy="xclip -selection clipboard"
-#    alias pbpaste="xclip -selection clipboard -o"
-# fi
 
 # Use NVIM, not VIM
 alias vim="nvim"
