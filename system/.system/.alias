@@ -57,3 +57,10 @@ alias gsta='git stash save -u'
 alias gstaa='git stash apply'
 alias gd='git diff'
 alias gsl='git stash list'
+
+# github copilot
+alias gcs='gh copilot suggest'
+alias gce='gh copilot explain'
+
+# nnn
+alias fm='nnn -de'
