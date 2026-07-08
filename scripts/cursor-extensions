@@ -1,0 +1,40 @@
+#!/bin/sh
+# Export or install Cursor extensions via the list checked into the
+# dotfiles repo (cursor/extensions.txt).
+#
+# Usage:
+#   cursor-extensions export   save installed extensions to the repo
+#   cursor-extensions install  install every extension in the repo list
+
+set -e
+
+dotfiles=$(cd "$(dirname "$0")/.." && pwd)
+file="$dotfiles/cursor/extensions.txt"
+
+if ! command -v cursor >/dev/null 2>&1; then
+  echo "cursor CLI not found; in Cursor run: Shell Command: Install 'cursor' command in PATH" >&2
+  exit 1
+fi
+
+case "$1" in
+  export)
+    mkdir -p "$dotfiles/cursor"
+    # sort -f keeps the list stable so diffs only show real changes
+    cursor --list-extensions 2>/dev/null | sort -f > "$file"
+    echo "$(wc -l < "$file" | tr -d ' ') extensions -> ${file#"$dotfiles"/}"
+    ;;
+  install)
+    if [ ! -f "$file" ]; then
+      echo "no extension list at $file" >&2
+      exit 1
+    fi
+    while IFS= read -r ext; do
+      [ -n "$ext" ] || continue
+      cursor --install-extension "$ext" 2>/dev/null
+    done < "$file"
+    ;;
+  *)
+    echo "usage: cursor-extensions export|install" >&2
+    exit 1
+    ;;
+esac
