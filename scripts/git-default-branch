@@ -1,0 +1,19 @@
+#!/bin/sh
+# Print the repo's primary branch name (main vs master).
+
+# Ask the remote-tracking HEAD first; if it's stale or unset,
+# `git remote set-head origin -a` refreshes it from the remote.
+b=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null)
+if [ -n "$b" ]; then
+  echo "${b#origin/}"
+  exit 0
+fi
+
+# Fall back to whichever conventional branch exists locally
+if git show-ref --verify --quiet refs/heads/main; then
+  echo main
+elif git show-ref --verify --quiet refs/heads/master; then
+  echo master
+else
+  git branch --show-current
+fi

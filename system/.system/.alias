@@ -46,21 +46,25 @@ alias gc='git commit -v'
 alias gca='git commit -v -a'
 alias gcb='git checkout -b'
 alias gco='git checkout'
-alias gcm='git checkout master'
+alias gcm='git checkout "$($HOME/.dotfiles/scripts/git-default-branch)"' # main or master, whichever the repo uses
 alias gf='git fetch'
 alias gm='git merge'
 alias gpo='git push origin'
-alias gpom='git pull origin master'
+alias gpom='git pull origin "$($HOME/.dotfiles/scripts/git-default-branch)"' # main or master, whichever the repo uses
 alias gp='git pull'
 alias gst='git status'
 alias gsta='git stash save -u'
 alias gstaa='git stash apply'
 alias gd='git diff'
 alias gsl='git stash list'
+alias gslog='git log --format="%h %ad %s"'
 
 # github copilot
 alias gcs='gh copilot suggest'
 alias gce='gh copilot explain'
 
 # nnn
-alias fm='nnn -de'
+alias n='nnn -de'
+
+# pnpm
+alias p='pnpm'

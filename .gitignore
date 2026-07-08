@@ -1,0 +1,5 @@
+# Machine-local / sensitive shell config — sourced by .zshrc but never committed
+system/.system/.private
+
+# Claude Code worktrees & local settings
+.claude/
