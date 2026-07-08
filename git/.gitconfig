@@ -37,5 +37,3 @@
     la = "!git config -l | grep alias | cut -c 7-"
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-[url "git@github.com:getoutreach"]
-	insteadOf = https://github.com/getoutreach
