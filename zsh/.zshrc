@@ -142,9 +142,6 @@ source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 # allow node to have more memory
 export NODE_OPTIONS="--max-old-space-size=8192"
 
-# Access global yarn packages
-export PATH="$PATH:`yarn global bin`"
-
 # Created by `pipx` on 2023-07-06 10:28:44
 export PATH="$PATH:/Users/steve/.local/bin"
 
