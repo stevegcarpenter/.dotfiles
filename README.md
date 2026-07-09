@@ -38,6 +38,48 @@ around. If a real file already exists at a target path, stow refuses to
 overwrite it — move the file aside first, or run `stow --adopt <package>`
 to pull the existing file into the repo and review the diff.
 
+## Neovim
+
+The nvim config (in the `vim` package) uses [lazy.nvim](https://github.com/folke/lazy.nvim)
+as its plugin manager. It requires Neovim **0.11+** (it uses the
+`vim.lsp.config` API), plus `git`, `make` and a C compiler (for
+telescope-fzf-native and treesitter parsers), and `node` (for the
+JS/TS language servers installed by mason).
+
+On first launch lazy.nvim bootstraps itself and installs all plugins;
+mason then installs the LSP servers, formatters, and linters in the
+background — give it a minute and check progress with `:Mason`.
+
+### Plugin versions are pinned in `lazy-lock.json`
+
+The repo only names the plugins; the exact working versions are pinned
+in `vim/.config/nvim/lazy-lock.json`. Because plugins are cloned into
+`~/.local/share/nvim/` — *outside this repo* — a machine's plugin state
+can drift or break even when the repo is fully up to date. Two rules
+keep machines in sync:
+
+- **After pulling** changes to the lock file, run `:Lazy restore` to
+  check every plugin out to the pinned versions.
+- **To upgrade plugins**, run `:Lazy update`, confirm nvim still works,
+  and commit the resulting `lazy-lock.json` diff like any other
+  dependency bump. Don't hand-edit the file.
+
+### Migrating a machine from the old packer setup
+
+Before July 2026 this config used packer.nvim. Packer leaves state
+behind that is not managed by stow or lazy.nvim and causes startup
+errors (`packer_compiled` / treesitter / mason-lspconfig failures) if
+it lingers. On any machine that ever ran the old config, delete it:
+
+```sh
+rm -rf ~/.config/nvim/plugin            # stale packer_compiled.lua (not a stow symlink)
+rm -rf ~/.local/share/nvim/site/pack/packer
+```
+
+Then start nvim and run `:Lazy restore`. If weirdness persists, the
+nuclear option is `rm -rf ~/.local/share/nvim ~/.local/state/nvim`
+followed by a fresh launch — everything in there is reinstallable.
+
 ## Cursor extensions
 
 The extensions installed in [Cursor](https://cursor.com) are tracked as a
