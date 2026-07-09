@@ -3,9 +3,9 @@ if vim.g.vscode then
   require("core.options")
   require("core.keymaps-vscode")
 else
-  require("plugins-setup")
   require("core.options")
-  require("core.keymaps")
+  require("core.keymaps") -- sets mapleader, which must happen before lazy.nvim loads
+  require("plugins-setup")
   require("core.colorscheme")
   require("plugins.comment")
   require("plugins.nvim-tree")

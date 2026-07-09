@@ -21,16 +21,19 @@ mason.setup()
 
 mason_lspconfig.setup({
   -- list of servers for mason to install
+  -- (installed servers are enabled automatically via vim.lsp.enable)
   ensure_installed = {
-    "tsserver",
+    "ts_ls", -- formerly "tsserver"
     "html",
     "cssls",
     "tailwindcss",
     "lua_ls",
     "emmet_ls",
   },
-  -- auto-install configured servers (with lspconfig)
-  automatic_installation = true, -- not the same as ensure_installed
+  -- stylua is used as a formatter via none-ls, not as an lsp server
+  automatic_enable = {
+    exclude = { "stylua" },
+  },
 })
 
 mason_null_ls.setup({
