@@ -125,13 +125,6 @@ done
 
 eval "$(jump shell)"
 
-# asdf: <=0.15 ships asdf.sh to source; 0.16+ (Go rewrite) just needs shims on PATH
-if [[ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]]; then
-  source /opt/homebrew/opt/asdf/libexec/asdf.sh
-else
-  export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-fi
-
 if [[ -d "$HOME/.local/share/solana/install/active_release/bin" ]]; then
   export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 fi
