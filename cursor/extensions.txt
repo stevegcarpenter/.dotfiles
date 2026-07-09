@@ -1,9 +1,11 @@
 andrewleedham.vscode-css-modules
 anthropic.claude-code
 anysphere.cursorpyright
+anysphere.remote-containers
 anysphere.remote-ssh
 apollographql.vscode-apollo
 arturock.gitstash
+biomejs.biome
 bradlc.vscode-tailwindcss
 catppuccin.catppuccin-vsc
 chakrounanas.turbo-console-log
@@ -40,6 +42,8 @@ ms-python.python
 ms-python.vscode-pylance
 ms-vscode.go
 ms-vscode.vscode-typescript-next
+mtxr.sqltools
+mtxr.sqltools-driver-pg
 mylesmurphy.prettify-ts
 nyxb.vscode-styled-colors
 oderwat.indent-rainbow
@@ -56,6 +60,7 @@ sketchbuch.vsc-workspace-sidebar
 streetsidesoftware.code-spell-checker
 styled-components.vscode-styled-components
 stylelint.vscode-stylelint
+thebearingedge.vscode-sql-lit
 vscodevim.vim
 whizkydee.material-palenight-theme
 yoavbls.pretty-ts-errors
