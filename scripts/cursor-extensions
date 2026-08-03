@@ -28,10 +28,28 @@ case "$1" in
       echo "no extension list at $file" >&2
       exit 1
     fi
+    # `cursor` inherits the loop's stdin and drains the rest of the list on
+    # the first iteration, so every later line vanishes and the loop exits
+    # after one pass -- redirect its stdin from /dev/null to stop that.
+    # Failures are collected and reported rather than discarded: a silently
+    # skipped extension is indistinguishable from a successful run.
+    failed=''
+    count=0
     while IFS= read -r ext; do
       [ -n "$ext" ] || continue
-      cursor --install-extension "$ext" 2>/dev/null
+      count=$((count + 1))
+      if cursor --install-extension "$ext" </dev/null >/dev/null 2>&1; then
+        printf '  ok    %s\n' "$ext"
+      else
+        printf '  FAIL  %s\n' "$ext"
+        failed="$failed $ext"
+      fi
     done < "$file"
+    echo "$count requested"
+    if [ -n "$failed" ]; then
+      echo "failed:$failed" >&2
+      exit 1
+    fi
     ;;
   *)
     echo "usage: cursor-extensions export|install" >&2
