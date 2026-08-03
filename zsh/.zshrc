@@ -143,16 +143,14 @@ source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 export NODE_OPTIONS="--max-old-space-size=8192"
 
 # Created by `pipx` on 2023-07-06 10:28:44
-export PATH="$PATH:/Users/steve/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Go configuration
 export GOPATH=$HOME/.go
 export PATH=$GOPATH/bin:$PATH
 
-source ~/.zshenv
-
 # pnpm
-export PNPM_HOME="/Users/steve/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -160,7 +158,7 @@ esac
 # pnpm end
 
 # bun completions
-[ -s "/Users/steve/.bun/_bun" ] && source "/Users/steve/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
