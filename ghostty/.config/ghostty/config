@@ -1,0 +1,32 @@
+# Ghostty configuration
+#
+# Full documented option list:
+#   ghostty +show-config --default --docs
+# Show only what this file changes from the defaults:
+#   ghostty +show-config --changes-only
+# Check for syntax errors:
+#   ghostty +validate-config
+
+# ---------------------------------------------------------------------------
+# Cursor: solid blue block, always
+# ---------------------------------------------------------------------------
+
+cursor-style = block
+
+# Never blink. Leaving this unset (the default) makes Ghostty honor DEC Mode 12,
+# so programs can start it blinking; any explicit value ignores DEC Mode 12.
+cursor-style-blink = false
+
+# Catppuccin Mocha "blue", matching the tmux status bar theme.
+cursor-color = #89b4fa
+
+# Text under the cursor. A solid block hides the glyph unless this contrasts
+# with cursor-color -- this is Catppuccin Mocha "base", i.e. a dark backdrop.
+cursor-text = #1e1e2e
+
+# The setting that actually makes it stick. Ghostty's shell integration forces
+# a bar cursor at every prompt regardless of cursor-style, so `cursor` must
+# become `no-cursor`. The remaining values are Ghostty's defaults, repeated
+# verbatim because assigning this key replaces the whole list rather than
+# merging into it.
+shell-integration-features = no-cursor,no-sudo,title,no-ssh-env,no-ssh-terminfo,path

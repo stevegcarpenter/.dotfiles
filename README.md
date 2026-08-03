@@ -6,15 +6,16 @@ Personal configuration files, managed with [GNU Stow](https://www.gnu.org/softwa
 
 Each top-level directory is a stow "package" whose contents mirror `$HOME`:
 
-| Package  | Provides                                                        |
-| -------- | --------------------------------------------------------------- |
-| `cursor` | `~/Library/Application Support/Cursor/User/settings.json`       |
-| `emacs`  | `~/.emacs`                                                      |
-| `git`    | `~/.gitconfig`                                                  |
-| `system` | `~/.system/` (shell aliases and extra config)                   |
-| `tmux`   | `~/.tmux.conf`                                                  |
-| `vim`    | `~/.vimrc`, `~/.vim.nvim.d/`, `~/.config/nvim/`                 |
-| `zsh`    | `~/.zshrc`                                                      |
+| Package   | Provides                                                        |
+| --------- | --------------------------------------------------------------- |
+| `cursor`  | `~/Library/Application Support/Cursor/User/settings.json`       |
+| `emacs`   | `~/.emacs`                                                      |
+| `ghostty` | `~/.config/ghostty/config`                                      |
+| `git`     | `~/.gitconfig`                                                  |
+| `system`  | `~/.system/` (shell aliases and extra config)                   |
+| `tmux`    | `~/.tmux.conf`                                                  |
+| `vim`     | `~/.vimrc`, `~/.vim.nvim.d/`, `~/.config/nvim/`                 |
+| `zsh`     | `~/.zshrc`                                                      |
 
 `scripts/` is not a stow package — it holds standalone helper scripts
 (add to `PATH` or call directly).
@@ -28,7 +29,7 @@ kept out of `$HOME` by `cursor/.stow-local-ignore`.
 brew install stow          # macOS
 git clone https://github.com/stevegcarpenter/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-stow cursor emacs git system tmux vim zsh
+stow cursor emacs ghostty git system tmux vim zsh
 ```
 
 `stow <package>` symlinks that package's files into the parent directory
