@@ -80,6 +80,9 @@ require("lazy").setup({
 
   -- git integration
   "lewis6991/gitsigns.nvim", -- show line modifications on left hand side
+
+  -- markdown preview in a floating window (uses the glow cli)
+  "ellisonleao/glow.nvim",
 }, {
   install = { colorscheme = { "nightfly" } },
   change_detection = { notify = false },

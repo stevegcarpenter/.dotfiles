@@ -19,4 +19,5 @@ else
   require("plugins.autopairs")
   require("plugins.treesitter")
   require("plugins.gitsigns")
+  require("plugins.glow")
 end

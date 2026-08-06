@@ -41,4 +41,12 @@
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   },
   "window.autoDetectColorScheme": false,
+  "workspaceSidebar.rootFolders": [
+    { "path": "~/projects/sparta", "depth": 0 },
+    {
+      "path": "~/projects/sparta/.claude/worktrees",
+      "depth": 1,
+      "excludeHiddenFolders": false,
+    },
+  ],
 }
