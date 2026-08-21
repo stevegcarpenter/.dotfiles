@@ -70,7 +70,8 @@ require("lazy").setup({
   -- treesitter configuration
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "main",
+    lazy = false, -- the main branch does not support lazy-loading
     build = ":TSUpdate",
   },
 
