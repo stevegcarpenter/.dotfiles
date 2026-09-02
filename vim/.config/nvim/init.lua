@@ -20,4 +20,5 @@ else
   require("plugins.treesitter")
   require("plugins.gitsigns")
   require("plugins.glow")
+  require("core.cheatsheet") -- :Cheatsheet, needs glow.nvim loaded
 end

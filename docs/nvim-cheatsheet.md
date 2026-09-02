@@ -91,6 +91,16 @@ TypeScript-only:
 | `Ctrl-e` | Close completion menu |
 | `Enter` | Confirm selection |
 
+## Markdown / cheat sheets (glow.nvim)
+
+| Key / Command | Action |
+|-----|--------|
+| `<leader>?` | Open this cheat sheet in a glow float |
+| `:Cheatsheet [name]` | Open `~/.dotfiles/docs/<name>-cheatsheet.md` (tab-completes; defaults to `nvim`) |
+| `:Glow` | Render the current markdown buffer in a float |
+| `:Glow <path>` | Render any markdown file |
+| `q` / `<Esc>` | Close the glow float |
+
 ## Plugin operators (defaults, but not stock vim)
 
 | Key | Plugin | Action |

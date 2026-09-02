@@ -15,6 +15,7 @@
 | `Ctrl-h` / `Ctrl-l` | Resize pane left / right (4 cells) |
 | `Ctrl-j` / `Ctrl-k` | Resize pane down / up (2 cells) |
 | `y` | Toggle synchronize-panes (type into all panes at once) |
+| `?` | Float `~/.dotfiles/docs` in nvim over the current pane (these cheat sheets); `:q` returns to whatever the pane was doing. Shadows the default `list-keys`, still available as `list-keys` from `prefix + :` |
 
 Mouse support is **on**: click to select panes/windows, drag borders to
 resize, scroll to enter copy mode.

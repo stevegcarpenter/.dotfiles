@@ -52,3 +52,6 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
+
+-- cheat sheets (see lua/core/cheatsheet.lua)
+keymap.set("n", "<leader>?", "<cmd>Cheatsheet<cr>") -- nvim cheat sheet in a glow float
