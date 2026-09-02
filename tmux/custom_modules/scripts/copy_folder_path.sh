@@ -42,6 +42,16 @@ fi
 # message is left intact rather than truncated to something unreadable.
 
 tmux set-option -g @catppuccin_ctp_folder_flash "$msg"
+
+# Spell out what happened in the status line's message pill (message-style /
+# message-format in .tmux.conf) as well: the pill flash alone only shows that
+# *something* happened to the folder module, and it is off at the right-hand
+# edge of the bar. -c is needed here for the same reason refresh-client needs
+# -t -- this script runs detached, so it has no "current client" of its own.
+# -d overrides the global display-time (4s) to match the sleep below, so the
+# message and the flash come up and clear together.
+tmux display-message -c "$client_tty" -d 1500 'Path copied!'
+
 tmux refresh-client -S -t "$client_tty"
 sleep 1.5
 tmux set-option -g @catppuccin_ctp_folder_flash ''
