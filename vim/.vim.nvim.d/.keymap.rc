@@ -43,6 +43,9 @@ nnoremap <leader><leader>p :set nopaste<CR>
 " save quick
 nnoremap <leader>w :w<CR>
 
+" cheat sheet (see .func.rc; mirrors nvim's <leader>?)
+nnoremap <leader>? :Cheatsheet<CR>
+
 let g:windowswap_map_key = 0 "prevent default bindings
 nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>

@@ -29,3 +29,29 @@ augroup Mkdir
         \ call mkdir(expand("<afile>:p:h"), "p") |
     \ endif
 augroup END
+
+" --------------------- cheat sheets ---------------------
+" :Cheatsheet [name] -- open ~/.dotfiles/docs/<name>-cheatsheet.md (default
+" "vim") read-only in a vertical split; q closes it. Plain-vim counterpart of
+" nvim's glow-based :Cheatsheet (lua/core/cheatsheet.lua).
+let s:cheatsheet_dir = expand('~/.dotfiles/docs')
+
+function! s:CheatsheetNames(arglead, cmdline, cursorpos)
+    let names = map(glob(s:cheatsheet_dir . '/*-cheatsheet.md', 0, 1),
+        \ {_, path -> substitute(fnamemodify(path, ':t:r'), '-cheatsheet$', '', '')})
+    return filter(names, {_, name -> name =~ '^' . a:arglead})
+endfunction
+
+function! s:Cheatsheet(name)
+    let name = empty(a:name) ? 'vim' : a:name
+    let path = s:cheatsheet_dir . '/' . name . '-cheatsheet.md'
+    if !filereadable(path)
+        echohl ErrorMsg | echomsg 'no cheat sheet at ' . path | echohl None
+        return
+    endif
+    execute 'botright vsplit' fnameescape(path)
+    setlocal readonly nomodifiable nobuflisted bufhidden=wipe noswapfile
+    nnoremap <buffer> <silent> q :close<CR>
+endfunction
+
+com! -nargs=? -complete=customlist,s:CheatsheetNames Cheatsheet call s:Cheatsheet(<q-args>)

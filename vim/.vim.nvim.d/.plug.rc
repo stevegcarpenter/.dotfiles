@@ -3,7 +3,10 @@
 " - For Vim:    ~/.vim/plugged
 call plug#begin(g:pluginpath)
 
-Plug '/usr/local/opt/fzf'              " System wide fzf binary
+" System fzf's vim plugin -- Homebrew prefix differs between Apple Silicon and Intel
+for s:fzf_dir in ['/opt/homebrew/opt/fzf', '/usr/local/opt/fzf']
+  if isdirectory(s:fzf_dir) | execute 'Plug' string(s:fzf_dir) | break | endif
+endfor
 Plug 'Chiel92/vim-autoformat'          " Auto-format code
 Plug 'Quramy/tsuquyomi'                " Typescript syntax checking
 Plug 'alvan/vim-closetag'              " Close html tags automagically
