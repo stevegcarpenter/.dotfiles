@@ -46,3 +46,16 @@ mason_null_ls.setup({
   -- auto-install configured formatters & linters (with null-ls)
   automatic_installation = true,
 })
+
+-- tree-sitter CLI is needed by nvim-treesitter to build parsers that
+-- don't ship a pre-generated parser.c (e.g. gitignore); install it via
+-- mason so every machine gets it the same way instead of a system package
+local registry_status, registry = pcall(require, "mason-registry")
+if registry_status then
+  registry.refresh(function()
+    local pkg_status, ts_cli = pcall(registry.get_package, "tree-sitter-cli")
+    if pkg_status and not ts_cli:is_installed() then
+      ts_cli:install()
+    end
+  end)
+end

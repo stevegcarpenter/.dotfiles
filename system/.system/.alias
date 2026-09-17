@@ -26,14 +26,11 @@ alias lsc="cat package.json | jq .scripts"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 
-# Use Vim, not Vi, (backslash prevents recursive alias)
+# Use NVIM, not Vi
 alias vi="nvim"
 
 # Ranger alias
 alias ra="ranger"
-
-# Use NVIM, not VIM
-alias vim="nvim"
 
 # Git aliases
 alias ga='git add'

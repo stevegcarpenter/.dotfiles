@@ -12,7 +12,7 @@ inoremap kk <esc>
 " split window fast
 nnoremap <leader>\| :vsplit<CR>
 nnoremap <leader>- :split<CR>
-nnoremap <leader>q :quit<CR>
+nnoremap <leader>q :quit!<CR>
 nnoremap <leader>o :Files <CR>
 nnoremap <leader>e :e<Space>
 nnoremap <leader>h :wincmd h<CR>
