@@ -48,5 +48,10 @@
       "depth": 1,
       "excludeHiddenFolders": false,
     },
+    {
+      "path": "~/.codex/worktrees",
+      "depth": 2,
+      "excludeHiddenFolders": false,
+    },
   ],
 }
