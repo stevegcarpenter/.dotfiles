@@ -22,6 +22,75 @@ Mouse support is **on**: click to select panes/windows, drag borders to
 resize, scroll to enter copy mode. Clicking the folder pill on the right of
 the status bar copies the current pane's full path (same as `prefix Ctrl-c`).
 
+## Agent indicators
+
+Window pills combine the states of local Codex and Claude Code processes in
+**all** their panes, including panes that aren't focused.
+
+| Indicator | Meaning |
+|-----------|---------|
+| No indicator | No agent present |
+| Grey `●` | Idle or interrupted |
+| Pulsing green `●` | Working, including compaction and tracked background subagents |
+| Green `✓` | Finished; stays green until another task starts or the agent exits |
+| Orange `?` | Needs an answer, permission, or plan approval |
+| Red `!` | Turn failed and stopped; individual recoverable tool errors don't count |
+
+When several agents share a window, priority is **question > failure > working
+> finished > idle**. Moving a pane updates its destination window. Process
+cleanup runs every three seconds; state changes normally appear within half a
+second. The working dot cycles through four brightness steps over two seconds.
+
+### Setup on a new machine
+
+After installing tmux, Python 3, Codex, and Claude Code, run:
+
+```sh
+python3 ~/.dotfiles/tmux/custom_modules/scripts/agent_status.py install --reload
+```
+
+This merges the status hooks into `~/.claude/settings.json` and
+`~/.codex/hooks.json`, preserving other settings/hooks and saving timestamped
+backups beside changed files. It is safe to run again. Restart existing agents
+to load their hooks; in Codex, use **`/hooks` to review and trust the new hooks**.
+The integration does not bypass Codex's hook trust or change tool permissions.
+
+Already-running agents without hooks initially show grey; their previous
+completion state cannot be reconstructed from lifecycle events they didn't
+report. Desktop agents and remote SSH agents are not associated with local
+tmux panes.
+
+The monitor starts from `.tmux.conf`, with a lock preventing duplicate monitors
+on reload. It stores only lifecycle metadata under
+`/tmp/tmux-agent-status-<uid>/`, never prompts, responses, or tool arguments.
+Completion survives monitor restarts. Neither completion nor long periods of
+silence cause an automatic change to idle.
+
+### API limitations
+
+Claude reports terminal API failures through `StopFailure`; Codex currently
+doesn't expose that hook. The monitor therefore also recognizes Codex's red
+terminal error marker and the agents' explicit interruption messages near the
+bottom of a working pane. This fallback depends on terminal UI versions and
+can miss a marker that has scrolled away. It never infers failure from ordinary
+text mentioning errors. Hooks remain the primary source of state.
+
+An approval indicator can remain orange while an approved tool executes,
+until its result hook arrives: neither integration has a general hook for the
+instant every approval dialog is dismissed. Asynchronous Codex questions stay
+orange until the next submitted prompt or completion. Questions written as
+ordinary conversational prose are completion, not a structured input request.
+
+Validation:
+
+```sh
+python3 -B -m unittest discover -s tmux/tests -v
+python3 -B tmux/tests/integration_agent_status.py
+```
+
+The integration test uses a separate tmux server and synthetic agent events;
+it doesn't send prompts to either model or alter existing sessions.
+
 ## Copy mode (vi keys)
 
 | Key | Action |
